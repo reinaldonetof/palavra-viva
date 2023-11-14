@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5776589A2B01CCFD00F6F2AF /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658992B01CCFD00F6F2AF /* TabBarController.storyboard */; };
+		5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776589D2B01CD7B00F6F2AF /* TabBarController.swift */; };
+		577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5776589F2B01CDD700F6F2AF /* HomeViewController.swift */; };
+		577658A22B01CDE200F6F2AF /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658A12B01CDE200F6F2AF /* HomeViewController.storyboard */; };
+		577658A42B01D16A00F6F2AF /* DailyDevotionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658A32B01D16A00F6F2AF /* DailyDevotionalViewController.swift */; };
+		577658A62B01D17500F6F2AF /* DailyDevotionalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658A52B01D17500F6F2AF /* DailyDevotionalViewController.storyboard */; };
+		577658A82B01D1B700F6F2AF /* NearChurchsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658A72B01D1B700F6F2AF /* NearChurchsViewController.swift */; };
+		577658AA2B01D1C500F6F2AF /* NearChurchsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658A92B01D1C500F6F2AF /* NearChurchsViewController.storyboard */; };
+		577658AC2B01D1E400F6F2AF /* PraiseSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658AB2B01D1E400F6F2AF /* PraiseSongsViewController.swift */; };
+		577658AE2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */; };
+		577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658AF2B01D20A00F6F2AF /* UserViewController.swift */; };
+		577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658B12B01D21400F6F2AF /* UserViewController.storyboard */; };
+		579D808B2B0166A90082AFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808A2B0166A90082AFED /* AppDelegate.swift */; };
+		579D808D2B0166A90082AFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808C2B0166A90082AFED /* SceneDelegate.swift */; };
+		579D808F2B0166A90082AFED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808E2B0166A90082AFED /* ViewController.swift */; };
+		579D80922B0166A90082AFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D80902B0166A90082AFED /* Main.storyboard */; };
+		579D80942B0166AA0082AFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579D80932B0166AA0082AFED /* Assets.xcassets */; };
+		579D80972B0166AA0082AFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D80952B0166AA0082AFED /* LaunchScreen.storyboard */; };
+		579D80A22B0166AB0082AFED /* PalavraVivaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80A12B0166AB0082AFED /* PalavraVivaTests.swift */; };
+		579D80AC2B0166AB0082AFED /* PalavraVivaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */; };
+		579D80AE2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		579D809E2B0166AB0082AFED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579D807F2B0166A90082AFED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579D80862B0166A90082AFED;
+			remoteInfo = PalavraViva;
+		};
+		579D80A82B0166AB0082AFED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579D807F2B0166A90082AFED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579D80862B0166A90082AFED;
+			remoteInfo = PalavraViva;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		577658992B01CCFD00F6F2AF /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		5776589D2B01CD7B00F6F2AF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5776589F2B01CDD700F6F2AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		577658A12B01CDE200F6F2AF /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		577658A32B01D16A00F6F2AF /* DailyDevotionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDevotionalViewController.swift; sourceTree = "<group>"; };
+		577658A52B01D17500F6F2AF /* DailyDevotionalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyDevotionalViewController.storyboard; sourceTree = "<group>"; };
+		577658A72B01D1B700F6F2AF /* NearChurchsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearChurchsViewController.swift; sourceTree = "<group>"; };
+		577658A92B01D1C500F6F2AF /* NearChurchsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NearChurchsViewController.storyboard; sourceTree = "<group>"; };
+		577658AB2B01D1E400F6F2AF /* PraiseSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseSongsViewController.swift; sourceTree = "<group>"; };
+		577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PraiseSongsViewController.storyboard; sourceTree = "<group>"; };
+		577658AF2B01D20A00F6F2AF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		577658B12B01D21400F6F2AF /* UserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserViewController.storyboard; sourceTree = "<group>"; };
+		579D80872B0166A90082AFED /* PalavraViva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PalavraViva.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		579D808A2B0166A90082AFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		579D808C2B0166A90082AFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		579D808E2B0166A90082AFED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		579D80912B0166A90082AFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		579D80932B0166AA0082AFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		579D80962B0166AA0082AFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		579D80982B0166AA0082AFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579D809D2B0166AB0082AFED /* PalavraVivaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalavraVivaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		579D80A12B0166AB0082AFED /* PalavraVivaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaTests.swift; sourceTree = "<group>"; };
+		579D80A72B0166AB0082AFED /* PalavraVivaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalavraVivaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITests.swift; sourceTree = "<group>"; };
+		579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		579D80842B0166A90082AFED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D809A2B0166AB0082AFED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D80A42B0166AB0082AFED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		577658982B01C68D00F6F2AF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				577658992B01CCFD00F6F2AF /* TabBarController.storyboard */,
+				5776589D2B01CD7B00F6F2AF /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		579D807E2B0166A90082AFED = {
+			isa = PBXGroup;
+			children = (
+				579D80892B0166A90082AFED /* PalavraViva */,
+				579D80A02B0166AB0082AFED /* PalavraVivaTests */,
+				579D80AA2B0166AB0082AFED /* PalavraVivaUITests */,
+				579D80882B0166A90082AFED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		579D80882B0166A90082AFED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				579D80872B0166A90082AFED /* PalavraViva.app */,
+				579D809D2B0166AB0082AFED /* PalavraVivaTests.xctest */,
+				579D80A72B0166AB0082AFED /* PalavraVivaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		579D80892B0166A90082AFED /* PalavraViva */ = {
+			isa = PBXGroup;
+			children = (
+				577658982B01C68D00F6F2AF /* TabBar */,
+				579D80BA2B0166BD0082AFED /* Modules */,
+				579D808A2B0166A90082AFED /* AppDelegate.swift */,
+				579D808C2B0166A90082AFED /* SceneDelegate.swift */,
+				579D808E2B0166A90082AFED /* ViewController.swift */,
+				579D80902B0166A90082AFED /* Main.storyboard */,
+				579D80932B0166AA0082AFED /* Assets.xcassets */,
+				579D80952B0166AA0082AFED /* LaunchScreen.storyboard */,
+				579D80982B0166AA0082AFED /* Info.plist */,
+			);
+			path = PalavraViva;
+			sourceTree = "<group>";
+		};
+		579D80A02B0166AB0082AFED /* PalavraVivaTests */ = {
+			isa = PBXGroup;
+			children = (
+				579D80A12B0166AB0082AFED /* PalavraVivaTests.swift */,
+			);
+			path = PalavraVivaTests;
+			sourceTree = "<group>";
+		};
+		579D80AA2B0166AB0082AFED /* PalavraVivaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */,
+				579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */,
+			);
+			path = PalavraVivaUITests;
+			sourceTree = "<group>";
+		};
+		579D80BA2B0166BD0082AFED /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				579D80C42B0168610082AFED /* BibleVerses */,
+				579D80C22B0168440082AFED /* BibleChapters */,
+				579D80C12B0167FA0082AFED /* User */,
+				579D80C02B0167C20082AFED /* PraiseSongs */,
+				579D80BF2B0167BC0082AFED /* NearChurchs */,
+				579D80BE2B0167B20082AFED /* Home */,
+				579D80BD2B0166E40082AFED /* DailyDevotional */,
+				579D80BC2B0166DF0082AFED /* Register */,
+				579D80BB2B0166C80082AFED /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		579D80BB2B0166C80082AFED /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		579D80BC2B0166DF0082AFED /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		579D80BD2B0166E40082AFED /* DailyDevotional */ = {
+			isa = PBXGroup;
+			children = (
+				577658A32B01D16A00F6F2AF /* DailyDevotionalViewController.swift */,
+				577658A52B01D17500F6F2AF /* DailyDevotionalViewController.storyboard */,
+			);
+			path = DailyDevotional;
+			sourceTree = "<group>";
+		};
+		579D80BE2B0167B20082AFED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5776589F2B01CDD700F6F2AF /* HomeViewController.swift */,
+				577658A12B01CDE200F6F2AF /* HomeViewController.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		579D80BF2B0167BC0082AFED /* NearChurchs */ = {
+			isa = PBXGroup;
+			children = (
+				577658A72B01D1B700F6F2AF /* NearChurchsViewController.swift */,
+				577658A92B01D1C500F6F2AF /* NearChurchsViewController.storyboard */,
+			);
+			path = NearChurchs;
+			sourceTree = "<group>";
+		};
+		579D80C02B0167C20082AFED /* PraiseSongs */ = {
+			isa = PBXGroup;
+			children = (
+				577658AB2B01D1E400F6F2AF /* PraiseSongsViewController.swift */,
+				577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */,
+			);
+			path = PraiseSongs;
+			sourceTree = "<group>";
+		};
+		579D80C12B0167FA0082AFED /* User */ = {
+			isa = PBXGroup;
+			children = (
+				577658AF2B01D20A00F6F2AF /* UserViewController.swift */,
+				577658B12B01D21400F6F2AF /* UserViewController.storyboard */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		579D80C22B0168440082AFED /* BibleChapters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BibleChapters;
+			sourceTree = "<group>";
+		};
+		579D80C42B0168610082AFED /* BibleVerses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BibleVerses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		579D80862B0166A90082AFED /* PalavraViva */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579D80B12B0166AB0082AFED /* Build configuration list for PBXNativeTarget "PalavraViva" */;
+			buildPhases = (
+				579D80832B0166A90082AFED /* Sources */,
+				579D80842B0166A90082AFED /* Frameworks */,
+				579D80852B0166A90082AFED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PalavraViva;
+			productName = PalavraViva;
+			productReference = 579D80872B0166A90082AFED /* PalavraViva.app */;
+			productType = "com.apple.product-type.application";
+		};
+		579D809C2B0166AB0082AFED /* PalavraVivaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579D80B42B0166AB0082AFED /* Build configuration list for PBXNativeTarget "PalavraVivaTests" */;
+			buildPhases = (
+				579D80992B0166AB0082AFED /* Sources */,
+				579D809A2B0166AB0082AFED /* Frameworks */,
+				579D809B2B0166AB0082AFED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579D809F2B0166AB0082AFED /* PBXTargetDependency */,
+			);
+			name = PalavraVivaTests;
+			productName = PalavraVivaTests;
+			productReference = 579D809D2B0166AB0082AFED /* PalavraVivaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		579D80A62B0166AB0082AFED /* PalavraVivaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579D80B72B0166AB0082AFED /* Build configuration list for PBXNativeTarget "PalavraVivaUITests" */;
+			buildPhases = (
+				579D80A32B0166AB0082AFED /* Sources */,
+				579D80A42B0166AB0082AFED /* Frameworks */,
+				579D80A52B0166AB0082AFED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579D80A92B0166AB0082AFED /* PBXTargetDependency */,
+			);
+			name = PalavraVivaUITests;
+			productName = PalavraVivaUITests;
+			productReference = 579D80A72B0166AB0082AFED /* PalavraVivaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		579D807F2B0166A90082AFED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					579D80862B0166A90082AFED = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					579D809C2B0166AB0082AFED = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 579D80862B0166A90082AFED;
+					};
+					579D80A62B0166AB0082AFED = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 579D80862B0166A90082AFED;
+					};
+				};
+			};
+			buildConfigurationList = 579D80822B0166A90082AFED /* Build configuration list for PBXProject "PalavraViva" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 579D807E2B0166A90082AFED;
+			productRefGroup = 579D80882B0166A90082AFED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				579D80862B0166A90082AFED /* PalavraViva */,
+				579D809C2B0166AB0082AFED /* PalavraVivaTests */,
+				579D80A62B0166AB0082AFED /* PalavraVivaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		579D80852B0166A90082AFED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577658AE2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard in Resources */,
+				577658A22B01CDE200F6F2AF /* HomeViewController.storyboard in Resources */,
+				579D80972B0166AA0082AFED /* LaunchScreen.storyboard in Resources */,
+				577658AA2B01D1C500F6F2AF /* NearChurchsViewController.storyboard in Resources */,
+				579D80942B0166AA0082AFED /* Assets.xcassets in Resources */,
+				5776589A2B01CCFD00F6F2AF /* TabBarController.storyboard in Resources */,
+				577658A62B01D17500F6F2AF /* DailyDevotionalViewController.storyboard in Resources */,
+				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
+				579D80922B0166A90082AFED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D809B2B0166AB0082AFED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D80A52B0166AB0082AFED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		579D80832B0166A90082AFED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
+				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
+				579D808F2B0166A90082AFED /* ViewController.swift in Sources */,
+				5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */,
+				579D808B2B0166A90082AFED /* AppDelegate.swift in Sources */,
+				579D808D2B0166A90082AFED /* SceneDelegate.swift in Sources */,
+				577658A82B01D1B700F6F2AF /* NearChurchsViewController.swift in Sources */,
+				577658A42B01D16A00F6F2AF /* DailyDevotionalViewController.swift in Sources */,
+				577658AC2B01D1E400F6F2AF /* PraiseSongsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D80992B0166AB0082AFED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579D80A22B0166AB0082AFED /* PalavraVivaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D80A32B0166AB0082AFED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579D80AE2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift in Sources */,
+				579D80AC2B0166AB0082AFED /* PalavraVivaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		579D809F2B0166AB0082AFED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579D80862B0166A90082AFED /* PalavraViva */;
+			targetProxy = 579D809E2B0166AB0082AFED /* PBXContainerItemProxy */;
+		};
+		579D80A92B0166AB0082AFED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579D80862B0166A90082AFED /* PalavraViva */;
+			targetProxy = 579D80A82B0166AB0082AFED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		579D80902B0166A90082AFED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579D80912B0166A90082AFED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		579D80952B0166AA0082AFED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579D80962B0166AA0082AFED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		579D80AF2B0166AB0082AFED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		579D80B02B0166AB0082AFED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		579D80B22B0166AB0082AFED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PalavraViva/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rcs.PalavraViva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		579D80B32B0166AB0082AFED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PalavraViva/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rcs.PalavraViva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		579D80B52B0166AB0082AFED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rcs.PalavraVivaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PalavraViva.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PalavraViva";
+			};
+			name = Debug;
+		};
+		579D80B62B0166AB0082AFED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rcs.PalavraVivaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PalavraViva.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PalavraViva";
+			};
+			name = Release;
+		};
+		579D80B82B0166AB0082AFED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rcs.PalavraVivaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PalavraViva;
+			};
+			name = Debug;
+		};
+		579D80B92B0166AB0082AFED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rcs.PalavraVivaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PalavraViva;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		579D80822B0166A90082AFED /* Build configuration list for PBXProject "PalavraViva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579D80AF2B0166AB0082AFED /* Debug */,
+				579D80B02B0166AB0082AFED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579D80B12B0166AB0082AFED /* Build configuration list for PBXNativeTarget "PalavraViva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579D80B22B0166AB0082AFED /* Debug */,
+				579D80B32B0166AB0082AFED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579D80B42B0166AB0082AFED /* Build configuration list for PBXNativeTarget "PalavraVivaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579D80B52B0166AB0082AFED /* Debug */,
+				579D80B62B0166AB0082AFED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579D80B72B0166AB0082AFED /* Build configuration list for PBXNativeTarget "PalavraVivaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579D80B82B0166AB0082AFED /* Debug */,
+				579D80B92B0166AB0082AFED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 579D807F2B0166A90082AFED /* Project object */;
+}
