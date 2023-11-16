@@ -33,6 +33,9 @@
 		57EDACB92B058F080040F792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACB72B058F080040F792 /* SearchTableViewCell.swift */; };
 		57EDACBA2B058F080040F792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EDACB82B058F080040F792 /* SearchTableViewCell.xib */; };
 		57EDACC02B0592150040F792 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACBF2B0592150040F792 /* UITextField+Extension.swift */; };
+		57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACC72B05C14D0040F792 /* BooksTableViewCell.swift */; };
+		57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EDACC82B05C14D0040F792 /* BooksTableViewCell.xib */; };
+		57EDACCD2B05C2440040F792 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACCC2B05C2440040F792 /* Books.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		57EDACB72B058F080040F792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		57EDACB82B058F080040F792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		57EDACBF2B0592150040F792 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		57EDACC72B05C14D0040F792 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
+		57EDACC82B05C14D0040F792 /* BooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksTableViewCell.xib; sourceTree = "<group>"; };
+		57EDACCC2B05C2440040F792 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,7 @@
 		579D80BE2B0167B20082AFED /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				57EDACCB2B05C1DF0040F792 /* Models */,
 				57EDACB52B0575E50040F792 /* Cells */,
 				57EDACB42B0575D00040F792 /* Service */,
 				57EDACB32B0575C50040F792 /* ViewModel */,
@@ -292,6 +299,7 @@
 		57EDACB52B0575E50040F792 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				57EDACC62B05C12A0040F792 /* BooksTableViewCell */,
 				57EDACB62B058BD20040F792 /* SearchTableViewCell */,
 			);
 			path = Cells;
@@ -320,6 +328,23 @@
 				57EDACBF2B0592150040F792 /* UITextField+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57EDACC62B05C12A0040F792 /* BooksTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				57EDACC72B05C14D0040F792 /* BooksTableViewCell.swift */,
+				57EDACC82B05C14D0040F792 /* BooksTableViewCell.xib */,
+			);
+			path = BooksTableViewCell;
+			sourceTree = "<group>";
+		};
+		57EDACCB2B05C1DF0040F792 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57EDACCC2B05C2440040F792 /* Books.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +463,7 @@
 				577658A62B01D17500F6F2AF /* DailyDevotionalViewController.storyboard in Resources */,
 				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
 				579D80922B0166A90082AFED /* Main.storyboard in Resources */,
+				57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +488,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */,
+				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
 				579D808F2B0166A90082AFED /* ViewController.swift in Sources */,
