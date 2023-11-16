@@ -36,6 +36,8 @@
 		57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACC72B05C14D0040F792 /* BooksTableViewCell.swift */; };
 		57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EDACC82B05C14D0040F792 /* BooksTableViewCell.xib */; };
 		57EDACCD2B05C2440040F792 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACCC2B05C2440040F792 /* Books.swift */; };
+		57EDACCF2B05C63F0040F792 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACCE2B05C63F0040F792 /* HomeService.swift */; };
+		57EDACD12B05C7740040F792 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACD02B05C7740040F792 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		57EDACC72B05C14D0040F792 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 		57EDACC82B05C14D0040F792 /* BooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksTableViewCell.xib; sourceTree = "<group>"; };
 		57EDACCC2B05C2440040F792 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		57EDACCE2B05C63F0040F792 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		57EDACD02B05C7740040F792 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +289,7 @@
 		57EDACB32B0575C50040F792 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				57EDACD02B05C7740040F792 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 		57EDACB42B0575D00040F792 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				57EDACCE2B05C63F0040F792 /* HomeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EDACCF2B05C63F0040F792 /* HomeService.swift in Sources */,
 				57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */,
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
@@ -500,6 +507,7 @@
 				577658A82B01D1B700F6F2AF /* NearChurchsViewController.swift in Sources */,
 				577658A42B01D16A00F6F2AF /* DailyDevotionalViewController.swift in Sources */,
 				577658AC2B01D1E400F6F2AF /* PraiseSongsViewController.swift in Sources */,
+				57EDACD12B05C7740040F792 /* HomeViewModel.swift in Sources */,
 				57EDACB92B058F080040F792 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

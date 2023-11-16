@@ -19,11 +19,12 @@ class BooksTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configElements()
         selectionStyle = .none
     }
 
     func configElements() {
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 32)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
     }
     
     func configCollection() {
