@@ -8,22 +8,37 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet var containerView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var list: [String] = [SearchTableViewCell.identifier]
+       
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configTable()
         // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configTable() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
     }
-    */
 
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if list[indexPath.row] == SearchTableViewCell.identifier {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+            return cell ?? UITableViewCell()
+        }
+        return UITableViewCell()
+    }
 }

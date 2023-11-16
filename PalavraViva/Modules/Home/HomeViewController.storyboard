@@ -15,9 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-HY-qWo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="YNc-HY-qWo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="N7X-kf-B92"/>
+                            <constraint firstItem="YNc-HY-qWo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Sc8-X7-46l"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YNc-HY-qWo" secondAttribute="trailing" id="cMh-VV-xc7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YNc-HY-qWo" secondAttribute="bottom" id="kce-di-iIo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="5EZ-qb-Rvc" id="sTE-q7-ejL"/>
+                        <outlet property="tableView" destination="YNc-HY-qWo" id="RYK-fZ-tUQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +41,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

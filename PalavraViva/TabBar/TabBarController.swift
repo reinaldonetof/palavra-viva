@@ -58,5 +58,6 @@ class TabBarController: UITabBarController {
         tabBar.layer.borderWidth = 0.2
         tabBar.layer.borderColor = UIColor.black.cgColor
         tabBar.backgroundColor = .white
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
