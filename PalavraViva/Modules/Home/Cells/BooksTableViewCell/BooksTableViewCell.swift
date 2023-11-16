@@ -12,6 +12,7 @@ class BooksTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     static let identifier = String(describing: BooksTableViewCell.self)
+    private var list: [Book]?
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -32,27 +33,36 @@ class BooksTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
             layout.estimatedItemSize = .zero
+            layout.estimatedItemSize = CGSize(width: 162, height: 52)
+            layout.minimumLineSpacing = 12
+            layout.minimumInteritemSpacing = 2
         }
-        collectionView.layer.borderWidth = 1
-        collectionView.layer.borderColor = UIColor.lightGray.cgColor
-        collectionView.layer.cornerRadius = 8
+        collectionView.register(CardBookCollectionViewCell.nib(), forCellWithReuseIdentifier: CardBookCollectionViewCell.identifier)
     }
     
     func setupCell(books: Books){
         titleLabel.text = books.title
+        list = books.books
+        collectionView.reloadData()
     }
 }
 
 extension BooksTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return list?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let list = list else { return UICollectionViewCell() }
+        guard indexPath.row < list.count else { return UICollectionViewCell() }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardBookCollectionViewCell.identifier, for: indexPath) as? CardBookCollectionViewCell
+        cell?.layer.borderWidth = 1
+        cell?.layer.borderColor = UIColor.lightGray.cgColor
+        cell?.layer.cornerRadius = 4
+        cell?.setupCell(book: list[indexPath.row])
+        return cell ?? UICollectionViewCell()
     }
-    
     
 }

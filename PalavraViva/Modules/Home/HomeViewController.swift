@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     func configTable() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
         tableView.register(BooksTableViewCell.nib(), forCellReuseIdentifier: BooksTableViewCell.identifier)
     }

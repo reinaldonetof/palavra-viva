@@ -4,21 +4,20 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="PalavraViva" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="PalavraViva" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ynM-6b-ZFK">
-                        <rect key="frame" x="20" y="32" width="280" height="40"/>
+                        <rect key="frame" x="20" y="16" width="280" height="43"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5Vy-gx-FuM"/>
@@ -27,24 +26,18 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                 <constraints>
                     <constraint firstItem="ynM-6b-ZFK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4rc-be-je2"/>
                     <constraint firstAttribute="trailing" secondItem="ynM-6b-ZFK" secondAttribute="trailing" constant="20" id="hwI-wl-ere"/>
                     <constraint firstAttribute="bottom" secondItem="ynM-6b-ZFK" secondAttribute="bottom" constant="8" id="w2K-b1-yud"/>
-                    <constraint firstItem="ynM-6b-ZFK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="zGR-hv-eMo"/>
+                    <constraint firstItem="ynM-6b-ZFK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="zGR-hv-eMo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="searchTextField" destination="ynM-6b-ZFK" id="Fsj-JN-JwZ"/>
             </connections>
-            <point key="canvasLocation" x="129.7709923664122" y="1.4084507042253522"/>
+            <point key="canvasLocation" x="154" y="9"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
