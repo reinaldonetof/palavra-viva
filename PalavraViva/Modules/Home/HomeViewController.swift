@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     @IBOutlet var containerView: UIView!
     @IBOutlet var tableView: UITableView!
 
@@ -16,8 +17,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        viewModel.delegate = self
         viewModel.fetchBooks()
-        configTable()
     }
 
     func configTable() {
@@ -45,5 +46,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell ?? UITableViewCell()
         }
         return UITableViewCell()
+    }
+}
+
+extension HomeViewController: HomeViewModelProtocol {
+    func errorRequest(error: Error) {
+        Alert().setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
+    }
+    
+    func successRequest() {
+        configTable()
     }
 }

@@ -12,9 +12,16 @@ struct ObjectToShow {
     var values: Any?
 }
 
+protocol HomeViewModelProtocol: AnyObject {
+    func successRequest()
+    func errorRequest(error: Error)
+}
+
 class HomeViewModel {
     private var service = HomeService()
     private var listToShow: [ObjectToShow]?
+    
+    weak var delegate: HomeViewModelProtocol?
 
     func fetchBooks() {
         service.getBooksMock { result in
@@ -22,7 +29,7 @@ class HomeViewModel {
             case let .success(success):
                 organizeBooksByTestament(success)
             case let .failure(failure):
-                print(failure)
+                self.delegate?.errorRequest(error: failure)
             }
         }
     }
@@ -38,6 +45,7 @@ class HomeViewModel {
             }
         }
         listToShow = [ObjectToShow(type: SearchTableViewCell.identifier), ObjectToShow(type: BooksTableViewCell.identifier, values: oldTestament), ObjectToShow(type: BooksTableViewCell.identifier, values: newTestament)]
+        self.delegate?.successRequest()
     }
 
     func getNumberOfRowsInSection() -> Int {

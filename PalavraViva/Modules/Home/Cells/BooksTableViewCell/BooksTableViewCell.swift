@@ -20,6 +20,7 @@ class BooksTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configElements()
+        configCollection()
         selectionStyle = .none
     }
 
@@ -34,6 +35,9 @@ class BooksTableViewCell: UITableViewCell {
             layout.scrollDirection = .horizontal
             layout.estimatedItemSize = .zero
         }
+        collectionView.layer.borderWidth = 1
+        collectionView.layer.borderColor = UIColor.lightGray.cgColor
+        collectionView.layer.cornerRadius = 8
     }
     
     func setupCell(books: Books){
