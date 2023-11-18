@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     @IBOutlet var containerView: UIView!
     @IBOutlet var tableView: UITableView!
 
@@ -16,11 +15,20 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
         viewModel.delegate = self
         viewModel.fetchBooks()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func configTable() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -43,6 +51,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if list[indexPath.row].type == BooksTableViewCell.identifier {
             let cell = tableView.dequeueReusableCell(withIdentifier: BooksTableViewCell.identifier, for: indexPath) as? BooksTableViewCell
+            cell?.delegate = self
             cell?.setupCell(books: list[indexPath.row].values as! Books)
             return cell ?? UITableViewCell()
         }
@@ -54,8 +63,18 @@ extension HomeViewController: HomeViewModelProtocol {
     func errorRequest(error: Error) {
         Alert().setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
     }
-    
+
     func successRequest() {
         configTable()
+    }
+}
+
+extension HomeViewController: BooksTableViewCellProtocol {
+    func didSelectBook(book: Book) {
+        let vcString = String(describing: BookChaptersViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(identifier: vcString) { coder -> BookChaptersViewController? in
+            BookChaptersViewController(coder: coder, book: book)
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

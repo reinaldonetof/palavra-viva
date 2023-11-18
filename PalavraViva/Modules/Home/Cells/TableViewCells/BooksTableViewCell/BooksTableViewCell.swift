@@ -7,12 +7,19 @@
 
 import UIKit
 
+protocol BooksTableViewCellProtocol: AnyObject {
+    func didSelectBook(book: Book)
+}
+
+
 class BooksTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    static let identifier = String(describing: BooksTableViewCell.self)
     private var list: [Book]?
+    weak var delegate: BooksTableViewCellProtocol?
+    
+    static let identifier = String(describing: BooksTableViewCell.self)
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -63,6 +70,12 @@ extension BooksTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         cell?.layer.cornerRadius = 4
         cell?.setupCell(book: list[indexPath.row])
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let list else { return }
+        let book = list[indexPath.row]
+        self.delegate?.didSelectBook(book: book)
     }
     
 }
