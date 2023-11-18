@@ -24,10 +24,10 @@ class HomeViewModel {
     weak var delegate: HomeViewModelProtocol?
 
     func fetchBooks() {
-        service.getBooksMock { result in
+        service.getBooks { result in
             switch result {
             case let .success(success):
-                organizeBooksByTestament(success)
+                self.organizeBooksByTestament(success)
             case let .failure(failure):
                 self.delegate?.errorRequest(error: failure)
             }
