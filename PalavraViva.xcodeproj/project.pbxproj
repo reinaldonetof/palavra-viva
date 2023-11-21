@@ -21,6 +21,11 @@
 		577658AE2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */; };
 		577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658AF2B01D20A00F6F2AF /* UserViewController.swift */; };
 		577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658B12B01D21400F6F2AF /* UserViewController.storyboard */; };
+		578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */; };
+		578F86E82B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */; };
+		578F86EF2B0C5A9100A2CFC0 /* ObjectToShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */; };
+		5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5792D17E2B0AABDD00CDBA86 /* ChaptersTableViewCell.swift */; };
+		5792D1812B0AABDD00CDBA86 /* ChaptersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5792D17F2B0AABDD00CDBA86 /* ChaptersTableViewCell.xib */; };
 		579D808B2B0166A90082AFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808A2B0166A90082AFED /* AppDelegate.swift */; };
 		579D808D2B0166A90082AFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808C2B0166A90082AFED /* SceneDelegate.swift */; };
 		579D808F2B0166A90082AFED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808E2B0166A90082AFED /* ViewController.swift */; };
@@ -80,6 +85,11 @@
 		577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PraiseSongsViewController.storyboard; sourceTree = "<group>"; };
 		577658AF2B01D20A00F6F2AF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		577658B12B01D21400F6F2AF /* UserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserViewController.storyboard; sourceTree = "<group>"; };
+		578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
+		578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectToShow.swift; sourceTree = "<group>"; };
+		5792D17E2B0AABDD00CDBA86 /* ChaptersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableViewCell.swift; sourceTree = "<group>"; };
+		5792D17F2B0AABDD00CDBA86 /* ChaptersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChaptersTableViewCell.xib; sourceTree = "<group>"; };
 		579D80872B0166A90082AFED /* PalavraViva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PalavraViva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579D808A2B0166A90082AFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		579D808C2B0166A90082AFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +164,61 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		578F86E42B0C4F9900A2CFC0 /* NumberCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */,
+				578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */,
+			);
+			path = NumberCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		578F86EA2B0C559400A2CFC0 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				57EDACB52B0575E50040F792 /* Cells */,
+				57EDACB42B0575D00040F792 /* Service */,
+				57EDACB32B0575C50040F792 /* ViewModel */,
+				5776589F2B01CDD700F6F2AF /* HomeViewController.swift */,
+				577658A12B01CDE200F6F2AF /* HomeViewController.storyboard */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		5792D1752B0AAA8500CDBA86 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5792D1772B0AAA9B00CDBA86 /* CollectionViewCells */,
+				5792D1762B0AAA9400CDBA86 /* TableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5792D1762B0AAA9400CDBA86 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5792D17D2B0AABC200CDBA86 /* ChaptersTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5792D1772B0AAA9B00CDBA86 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				578F86E42B0C4F9900A2CFC0 /* NumberCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		5792D17D2B0AABC200CDBA86 /* ChaptersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5792D17E2B0AABDD00CDBA86 /* ChaptersTableViewCell.swift */,
+				5792D17F2B0AABDD00CDBA86 /* ChaptersTableViewCell.xib */,
+			);
+			path = ChaptersTableViewCell;
+			sourceTree = "<group>";
+		};
 		579D807E2B0166A90082AFED = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +277,6 @@
 		579D80BA2B0166BD0082AFED /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				579D80C42B0168610082AFED /* BibleVerses */,
-				579D80C22B0168440082AFED /* BookChapters */,
 				579D80C12B0167FA0082AFED /* User */,
 				579D80C02B0167C20082AFED /* PraiseSongs */,
 				579D80BF2B0167BC0082AFED /* NearChurchs */,
@@ -252,11 +315,9 @@
 			isa = PBXGroup;
 			children = (
 				57EDACCB2B05C1DF0040F792 /* Models */,
-				57EDACB52B0575E50040F792 /* Cells */,
-				57EDACB42B0575D00040F792 /* Service */,
-				57EDACB32B0575C50040F792 /* ViewModel */,
-				5776589F2B01CDD700F6F2AF /* HomeViewController.swift */,
-				577658A12B01CDE200F6F2AF /* HomeViewController.storyboard */,
+				579D80C42B0168610082AFED /* BibleVersesView */,
+				578F86EA2B0C559400A2CFC0 /* HomeView */,
+				579D80C22B0168440082AFED /* BookChaptersView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -288,21 +349,22 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		579D80C22B0168440082AFED /* BookChapters */ = {
+		579D80C22B0168440082AFED /* BookChaptersView */ = {
 			isa = PBXGroup;
 			children = (
+				5792D1752B0AAA8500CDBA86 /* Cells */,
 				57E09E3E2B0874B8005267CE /* ViewModel */,
 				57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */,
 				57E09E3C2B086F01005267CE /* BookChaptersViewController.storyboard */,
 			);
-			path = BookChapters;
+			path = BookChaptersView;
 			sourceTree = "<group>";
 		};
-		579D80C42B0168610082AFED /* BibleVerses */ = {
+		579D80C42B0168610082AFED /* BibleVersesView */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = BibleVerses;
+			path = BibleVersesView;
 			sourceTree = "<group>";
 		};
 		57E09E3E2B0874B8005267CE /* ViewModel */ = {
@@ -395,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				57EDACCC2B05C2440040F792 /* Books.swift */,
+				578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -525,9 +588,11 @@
 				577658AA2B01D1C500F6F2AF /* NearChurchsViewController.storyboard in Resources */,
 				57EDACD82B05D1B00040F792 /* CardBookCollectionViewCell.xib in Resources */,
 				57EDACBA2B058F080040F792 /* SearchTableViewCell.xib in Resources */,
+				5792D1812B0AABDD00CDBA86 /* ChaptersTableViewCell.xib in Resources */,
 				57E09E3D2B086F01005267CE /* BookChaptersViewController.storyboard in Resources */,
 				579D80942B0166AA0082AFED /* Assets.xcassets in Resources */,
 				5776589A2B01CCFD00F6F2AF /* TabBarController.storyboard in Resources */,
+				578F86E82B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib in Resources */,
 				576F44B92B02FF730029A54D /* book-with-comment.json in Resources */,
 				577658A62B01D17500F6F2AF /* DailyDevotionalViewController.storyboard in Resources */,
 				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
@@ -560,10 +625,12 @@
 				57EDACD72B05D1B00040F792 /* CardBookCollectionViewCell.swift in Sources */,
 				57EDACCF2B05C63F0040F792 /* HomeService.swift in Sources */,
 				57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */,
+				578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */,
 				57E09E402B0874E1005267CE /* BookChaptersViewModel.swift in Sources */,
 				57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */,
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
+				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
 				579D808F2B0166A90082AFED /* ViewController.swift in Sources */,
 				5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */,
@@ -576,6 +643,7 @@
 				577658AC2B01D1E400F6F2AF /* PraiseSongsViewController.swift in Sources */,
 				57EDACD12B05C7740040F792 /* HomeViewModel.swift in Sources */,
 				57EDACD32B05D0850040F792 /* Alert.swift in Sources */,
+				578F86EF2B0C5A9100A2CFC0 /* ObjectToShow.swift in Sources */,
 				57EDACB92B058F080040F792 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

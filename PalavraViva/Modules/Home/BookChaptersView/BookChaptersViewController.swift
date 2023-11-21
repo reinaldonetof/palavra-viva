@@ -8,11 +8,10 @@
 import UIKit
 
 class BookChaptersViewController: UIViewController {
-
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: BookChaptersViewModel?
+    var viewModel: BookChaptersViewModel
     
     init?(coder: NSCoder, book: Book) {
         self.viewModel = BookChaptersViewModel(book: book)
@@ -39,20 +38,27 @@ class BookChaptersViewController: UIViewController {
     }
     
     func configElements() {
-        guard let book = viewModel?.getBook() else { return }
-        
+        let book = viewModel.getBook()
         bookNameLabel.text = book.name
-         
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.register(ChaptersTableViewCell.nib(), forCellReuseIdentifier: ChaptersTableViewCell.identifier)
+    }
+}
+
+extension BookChaptersViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNumberOfRows()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let list = viewModel.getListToShow()
+        if list[indexPath.row].type == ChaptersTableViewCell.identifier {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ChaptersTableViewCell.identifier, for: indexPath) as? ChaptersTableViewCell
+            cell?.setupCell(book: list[indexPath.row].values as! Book)
+            return cell ?? UITableViewCell()
+        }
+        return UITableViewCell()
     }
-    */
-
 }

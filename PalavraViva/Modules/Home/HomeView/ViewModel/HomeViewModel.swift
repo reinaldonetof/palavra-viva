@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct ObjectToShow {
-    var type: String
-    var values: Any?
-}
-
 protocol HomeViewModelProtocol: AnyObject {
     func successRequest()
     func errorRequest(error: Error)
