@@ -56,9 +56,16 @@ extension BookChaptersViewController: UITableViewDelegate, UITableViewDataSource
         let list = viewModel.getListToShow()
         if list[indexPath.row].type == ChaptersTableViewCell.identifier {
             let cell = tableView.dequeueReusableCell(withIdentifier: ChaptersTableViewCell.identifier, for: indexPath) as? ChaptersTableViewCell
+            cell?.delegate = self
             cell?.setupCell(book: list[indexPath.row].values as! Book)
             return cell ?? UITableViewCell()
         }
         return UITableViewCell()
+    }
+}
+
+extension BookChaptersViewController:  ChaptersTableViewCellProtocol {
+    func didSelectChapter(chapter: Int) {
+        print(chapter)
     }
 }

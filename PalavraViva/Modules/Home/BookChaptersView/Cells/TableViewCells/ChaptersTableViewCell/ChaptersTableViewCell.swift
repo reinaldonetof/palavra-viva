@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol ChaptersTableViewCellProtocol: AnyObject {
+    func didSelectChapter(chapter: Int)
+}
+
 class ChaptersTableViewCell: UITableViewCell {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     @IBOutlet weak var myCollectionViewHeight: NSLayoutConstraint!
     
     private var book: Book?
+    weak var delegate: ChaptersTableViewCellProtocol?
     
     static let identifier = String(describing: ChaptersTableViewCell.self)
     
@@ -26,13 +31,6 @@ class ChaptersTableViewCell: UITableViewCell {
         configElements()
         configCollection()
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        let height = chapterCollectionView.collectionViewLayout.collectionViewContentSize.height
-//        myCollectionViewHeight.constant = height
-//        self.view.layoutIfNeeded()
-//    }
     
     func configElements() {
         headerLabel.text = "Capítulos"
@@ -71,5 +69,9 @@ extension ChaptersTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 48, height: 48)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.didSelectChapter(chapter: indexPath.row + 1)
     }
 }
