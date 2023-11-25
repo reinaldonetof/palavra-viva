@@ -65,8 +65,10 @@ extension BookChaptersViewController: UITableViewDelegate, UITableViewDataSource
 
 extension BookChaptersViewController:  ChaptersTableViewCellProtocol {
     func didSelectChapter(chapter: Int) {
-        let vcString = String(describing: BibleVersesTableViewController.self)
-        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? BibleVersesTableViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        let vcString = String(describing: BookVersesTableViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(identifier: vcString) { coder -> BookVersesTableViewController? in
+            BookVersesTableViewController(coder: coder, book: self.viewModel.getBook(), chapterSelected: chapter)
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
