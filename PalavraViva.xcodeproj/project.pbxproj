@@ -35,6 +35,8 @@
 		579D80A22B0166AB0082AFED /* PalavraVivaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80A12B0166AB0082AFED /* PalavraVivaTests.swift */; };
 		579D80AC2B0166AB0082AFED /* PalavraVivaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */; };
 		579D80AE2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */; };
+		57CC99F42B0EFB5200FC599D /* BibleVersesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC99F32B0EFB5200FC599D /* BibleVersesTableViewController.swift */; };
+		57CC99F62B0EFB5C00FC599D /* BibleVersesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CC99F52B0EFB5C00FC599D /* BibleVersesTableViewController.storyboard */; };
 		57E09E362B0863E8005267CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 57E09E352B0863E8005267CE /* Alamofire */; };
 		57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E382B0865ED005267CE /* GlobalPreferences.swift */; };
 		57E09E3B2B086EEE005267CE /* BookChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */; };
@@ -103,6 +105,8 @@
 		579D80A72B0166AB0082AFED /* PalavraVivaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalavraVivaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITests.swift; sourceTree = "<group>"; };
 		579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57CC99F32B0EFB5200FC599D /* BibleVersesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVersesTableViewController.swift; sourceTree = "<group>"; };
+		57CC99F52B0EFB5C00FC599D /* BibleVersesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BibleVersesTableViewController.storyboard; sourceTree = "<group>"; };
 		57E09E382B0865ED005267CE /* GlobalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalPreferences.swift; sourceTree = "<group>"; };
 		57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChaptersViewController.swift; sourceTree = "<group>"; };
 		57E09E3C2B086F01005267CE /* BookChaptersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookChaptersViewController.storyboard; sourceTree = "<group>"; };
@@ -363,6 +367,8 @@
 		579D80C42B0168610082AFED /* BibleVersesView */ = {
 			isa = PBXGroup;
 			children = (
+				57CC99F32B0EFB5200FC599D /* BibleVersesTableViewController.swift */,
+				57CC99F52B0EFB5C00FC599D /* BibleVersesTableViewController.storyboard */,
 			);
 			path = BibleVersesView;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
 				579D80922B0166A90082AFED /* Main.storyboard in Resources */,
 				57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */,
+				57CC99F62B0EFB5C00FC599D /* BibleVersesTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +633,7 @@
 				57EDACCF2B05C63F0040F792 /* HomeService.swift in Sources */,
 				57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */,
 				578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */,
+				57CC99F42B0EFB5200FC599D /* BibleVersesTableViewController.swift in Sources */,
 				57E09E402B0874E1005267CE /* BookChaptersViewModel.swift in Sources */,
 				57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */,
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,

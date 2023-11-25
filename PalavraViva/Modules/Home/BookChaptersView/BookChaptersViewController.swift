@@ -8,7 +8,6 @@
 import UIKit
 
 class BookChaptersViewController: UIViewController {
-    @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: BookChaptersViewModel
@@ -39,7 +38,7 @@ class BookChaptersViewController: UIViewController {
     
     func configElements() {
         let book = viewModel.getBook()
-        bookNameLabel.text = book.name
+        title = book.name
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -66,6 +65,8 @@ extension BookChaptersViewController: UITableViewDelegate, UITableViewDataSource
 
 extension BookChaptersViewController:  ChaptersTableViewCellProtocol {
     func didSelectChapter(chapter: Int) {
-        print(chapter)
+        let vcString = String(describing: BibleVersesTableViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? BibleVersesTableViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 }
