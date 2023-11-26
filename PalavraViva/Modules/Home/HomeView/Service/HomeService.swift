@@ -11,8 +11,6 @@ import Alamofire
 typealias GetBooksReturnType = ((Result<[Book], Error>) -> Void)
 
 class HomeService {
-    private var globalPrefereces = GlobalPreferences()
-    
     func getBooksMock(completion: (Result<[Book], Error>) -> Void) {
         if let url = Bundle.main.url(forResource: "books", withExtension: "json") {
             do {
@@ -39,9 +37,9 @@ class HomeService {
     
     // tem como em vez de fazer o Service dentro de cada case, tem como eu apenas chamar a funçao getBooksAF?
     func getBooks(completion: @escaping (Result<[Book], Error>) -> Void) {
-        switch globalPrefereces.serviceType {
+        switch GlobalPreferences.serviceType {
         case .api:
-            let urlString = "https://www.abibliadigital.com.br/api/books"
+            let urlString = "\(GlobalPreferences.apiUrl)/books"
             AF.request(urlString, method: .get).responseDecodable(of: [Book].self) { response in
                 switch response.result {
                 case .success(let history):

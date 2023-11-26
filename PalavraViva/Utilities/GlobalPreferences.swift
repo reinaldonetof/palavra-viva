@@ -13,6 +13,6 @@ enum ServiceTypes {
 }
 
 struct GlobalPreferences {
-    var serviceType: ServiceTypes = .mock
-    var apiUrl = "https://www.abibliadigital.com.br/api/"
+    static var serviceType: ServiceTypes = .mock
+    static var apiUrl = "https://www.abibliadigital.com.br/api"
 }
