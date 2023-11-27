@@ -49,7 +49,9 @@ class BookVersesTableViewController: UITableViewController {
     }
     
     @objc func navigateToEditPreference() {
-        print("AQUI")
+        let vcString = String(describing: UserPreferenceViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? UserPreferenceViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

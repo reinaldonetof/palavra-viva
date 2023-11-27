@@ -15,9 +15,40 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamanho da Fonte:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gL-up-4eF">
+                                <rect key="frame" x="20" y="71" width="145.33333333333334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cad-z5-ETy">
+                                <rect key="frame" x="175.33333333333337" y="66.666666666666671" width="175" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKm-Pk-UQT">
+                                <rect key="frame" x="352.33333333333331" y="71" width="20.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cad-z5-ETy" firstAttribute="leading" secondItem="5gL-up-4eF" secondAttribute="trailing" constant="12" id="O4a-Qa-Vav"/>
+                            <constraint firstItem="5gL-up-4eF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="PzA-6J-gVs"/>
+                            <constraint firstItem="Cad-z5-ETy" firstAttribute="centerY" secondItem="5gL-up-4eF" secondAttribute="centerY" id="ahv-yt-FVU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JKm-Pk-UQT" secondAttribute="trailing" constant="20" id="che-Oh-GfS"/>
+                            <constraint firstItem="5gL-up-4eF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="e3w-er-kw7"/>
+                            <constraint firstItem="JKm-Pk-UQT" firstAttribute="leading" secondItem="Cad-z5-ETy" secondAttribute="trailing" constant="4" id="jYE-6B-UEU"/>
+                            <constraint firstItem="JKm-Pk-UQT" firstAttribute="centerY" secondItem="Cad-z5-ETy" secondAttribute="centerY" id="qex-0O-aAf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fontSizeDescriptionLabel" destination="5gL-up-4eF" id="fDk-ez-rg5"/>
+                        <outlet property="fontSizeLabel" destination="JKm-Pk-UQT" id="aJz-bZ-JSI"/>
+                        <outlet property="sliderComponent" destination="Cad-z5-ETy" id="wbY-Kx-d8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

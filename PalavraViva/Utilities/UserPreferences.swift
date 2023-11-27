@@ -15,6 +15,10 @@ enum Preferences: String {
 }
 
 class UserPreferences {
+    static func updateUserDefaults(_ value: Any,_ key: Preferences) {
+        UserDefaults.standard.set(value, forKey: key.rawValue)
+    }
+    
     static func getVersion() -> String {
         if let version = UserDefaults.standard.object(forKey: Preferences.version.rawValue) as? String {
             return version
