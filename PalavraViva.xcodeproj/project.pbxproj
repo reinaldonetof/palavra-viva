@@ -62,6 +62,7 @@
 		57FA76612B13E10F003A44E6 /* BookVerseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76602B13E10F003A44E6 /* BookVerseService.swift */; };
 		57FA76642B1425CF003A44E6 /* UserPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76632B1425CF003A44E6 /* UserPreferenceViewController.swift */; };
 		57FA76662B1425DD003A44E6 /* UserPreferenceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FA76652B1425DD003A44E6 /* UserPreferenceViewController.storyboard */; };
+		57FA76682B143799003A44E6 /* NSNotification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76672B143799003A44E6 /* NSNotification.Name+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		57FA76602B13E10F003A44E6 /* BookVerseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVerseService.swift; sourceTree = "<group>"; };
 		57FA76632B1425CF003A44E6 /* UserPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceViewController.swift; sourceTree = "<group>"; };
 		57FA76652B1425DD003A44E6 /* UserPreferenceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPreferenceViewController.storyboard; sourceTree = "<group>"; };
+		57FA76672B143799003A44E6 /* NSNotification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification.Name+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				57EDACBF2B0592150040F792 /* UITextField+Extension.swift */,
+				57FA76672B143799003A44E6 /* NSNotification.Name+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				57FA76592B13D8CF003A44E6 /* VerseTableViewCell.swift in Sources */,
 				57EDACD12B05C7740040F792 /* HomeViewModel.swift in Sources */,
 				57EDACD32B05D0850040F792 /* Alert.swift in Sources */,
+				57FA76682B143799003A44E6 /* NSNotification.Name+Extension.swift in Sources */,
 				578F86EF2B0C5A9100A2CFC0 /* ObjectToShow.swift in Sources */,
 				57EDACB92B058F080040F792 /* SearchTableViewCell.swift in Sources */,
 				57FA765E2B13DBE6003A44E6 /* Chapter.swift in Sources */,

@@ -16,18 +16,16 @@ class VerseTableViewCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
 
-    private var fontSize: Int = UserPreferences.getFontSize()
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     func setupCell(verse: Verse) {
         let boldAttribute = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: CGFloat(fontSize - 2)),
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: CGFloat(UserPreferences.getFontSize() - 2)),
         ]
         let regularAttribute = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: CGFloat(fontSize)),
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: CGFloat(UserPreferences.getFontSize())),
         ]
         let boldText = NSAttributedString(string: "\(verse.number).", attributes: boldAttribute)
         let regularText = NSAttributedString(string: " \(verse.text)", attributes: regularAttribute)

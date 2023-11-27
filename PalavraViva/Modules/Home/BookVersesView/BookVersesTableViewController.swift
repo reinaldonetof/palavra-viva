@@ -8,7 +8,9 @@
 import UIKit
 
 class BookVersesTableViewController: UITableViewController {
-    var viewModel: BookVersesViewModel
+    private var viewModel: BookVersesViewModel
+    private var isShowing = false
+    private var shouldReloadData = false
 
     init?(coder: NSCoder, book: Book, chapterSelected: Int) {
         viewModel = BookVersesViewModel(book: book, chapter: chapterSelected)
@@ -24,6 +26,7 @@ class BookVersesTableViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         refreshControl?.beginRefreshing()
+        configObserver()
         viewModel.delegate = self
         viewModel.fetchVerses()
     }
@@ -36,6 +39,18 @@ class BookVersesTableViewController: UITableViewController {
         tableView.reloadData()
         refreshControl?.endRefreshing()
     }
+    
+    func configObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(changeFontSize), name: .changeFontSize, object: nil)
+    }
+    
+    @objc func changeFontSize() {
+        if (isShowing) {
+            tableView.reloadData()
+        } else {
+            shouldReloadData = true
+        }
+    }
 
     @objc private func refresh() {
         refreshControl?.beginRefreshing()
@@ -46,6 +61,11 @@ class BookVersesTableViewController: UITableViewController {
         let button = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(navigateToEditPreference))
         navigationItem.rightBarButtonItem = button
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        isShowing = true
+        if(shouldReloadData) {
+            tableView.reloadData()
+            shouldReloadData = false
+        }
     }
     
     @objc func navigateToEditPreference() {
@@ -57,6 +77,7 @@ class BookVersesTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        isShowing = false
     }
 
     // MARK: - Table view data source

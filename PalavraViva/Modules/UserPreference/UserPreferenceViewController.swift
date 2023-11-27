@@ -56,6 +56,7 @@ class UserPreferenceViewController: UIViewController {
     func changeFontSizeUserPreference(_ value: Int) {
         if(value != UserPreferences.getFontSize()) {
             UserPreferences.updateUserDefaults(value, .fontSize)
+            NotificationCenter.default.post(name: .changeFontSize, object: nil)
         }
     }
     
