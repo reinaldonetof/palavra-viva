@@ -43,7 +43,13 @@ class BookVersesTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let button = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(navigateToEditPreference))
+        navigationItem.rightBarButtonItem = button
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @objc func navigateToEditPreference() {
+        print("AQUI")
     }
 
     override func viewWillDisappear(_ animated: Bool) {

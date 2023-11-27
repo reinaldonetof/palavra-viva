@@ -60,6 +60,8 @@
 		57FA765C2B13D9D1003A44E6 /* book-verse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57FA765B2B13D9D1003A44E6 /* book-verse.json */; };
 		57FA765E2B13DBE6003A44E6 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA765D2B13DBE6003A44E6 /* Chapter.swift */; };
 		57FA76612B13E10F003A44E6 /* BookVerseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76602B13E10F003A44E6 /* BookVerseService.swift */; };
+		57FA76642B1425CF003A44E6 /* UserPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76632B1425CF003A44E6 /* UserPreferenceViewController.swift */; };
+		57FA76662B1425DD003A44E6 /* UserPreferenceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FA76652B1425DD003A44E6 /* UserPreferenceViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		57FA765B2B13D9D1003A44E6 /* book-verse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "book-verse.json"; sourceTree = "<group>"; };
 		57FA765D2B13DBE6003A44E6 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		57FA76602B13E10F003A44E6 /* BookVerseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVerseService.swift; sourceTree = "<group>"; };
+		57FA76632B1425CF003A44E6 /* UserPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceViewController.swift; sourceTree = "<group>"; };
+		57FA76652B1425DD003A44E6 /* UserPreferenceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPreferenceViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,7 @@
 		579D80BA2B0166BD0082AFED /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				57FA76622B1425AB003A44E6 /* UserPreference */,
 				579D80C12B0167FA0082AFED /* User */,
 				579D80C02B0167C20082AFED /* PraiseSongs */,
 				579D80BF2B0167BC0082AFED /* NearChurchs */,
@@ -530,6 +535,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		57FA76622B1425AB003A44E6 /* UserPreference */ = {
+			isa = PBXGroup;
+			children = (
+				57FA76632B1425CF003A44E6 /* UserPreferenceViewController.swift */,
+				57FA76652B1425DD003A44E6 /* UserPreferenceViewController.storyboard */,
+			);
+			path = UserPreference;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,6 +670,7 @@
 				578F86E82B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib in Resources */,
 				576F44B92B02FF730029A54D /* book-with-comment.json in Resources */,
 				577658A62B01D17500F6F2AF /* DailyDevotionalViewController.storyboard in Resources */,
+				57FA76662B1425DD003A44E6 /* UserPreferenceViewController.storyboard in Resources */,
 				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
 				579D80922B0166A90082AFED /* Main.storyboard in Resources */,
 				57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */,
@@ -706,6 +721,7 @@
 				57EDACC02B0592150040F792 /* UITextField+Extension.swift in Sources */,
 				577658A82B01D1B700F6F2AF /* NearChurchsViewController.swift in Sources */,
 				577658A42B01D16A00F6F2AF /* DailyDevotionalViewController.swift in Sources */,
+				57FA76642B1425CF003A44E6 /* UserPreferenceViewController.swift in Sources */,
 				577658AC2B01D1E400F6F2AF /* PraiseSongsViewController.swift in Sources */,
 				57FA76592B13D8CF003A44E6 /* VerseTableViewCell.swift in Sources */,
 				57EDACD12B05C7740040F792 /* HomeViewModel.swift in Sources */,
