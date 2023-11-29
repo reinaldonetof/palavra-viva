@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZC-il-En5">
+                                <rect key="frame" x="157" y="443" width="79" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Google"/>
+                                <connections>
+                                    <action selector="tappedGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGA-oy-WQU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="KZC-il-En5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="26r-LH-cJ4"/>
+                            <constraint firstItem="KZC-il-En5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7ij-Dw-Mbk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fgp-dB-Q2b"/>
                 </viewController>
