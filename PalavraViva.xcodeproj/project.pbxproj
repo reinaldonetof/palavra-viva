@@ -21,6 +21,7 @@
 		577658AE2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */; };
 		577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658AF2B01D20A00F6F2AF /* UserViewController.swift */; };
 		577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658B12B01D21400F6F2AF /* UserViewController.storyboard */; };
+		578A136E2B18237400C2B5E0 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578A136D2B18237400C2B5E0 /* AudioPlayer.swift */; };
 		578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */; };
 		578F86E82B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */; };
 		578F86EF2B0C5A9100A2CFC0 /* ObjectToShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */; };
@@ -101,6 +102,7 @@
 		577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PraiseSongsViewController.storyboard; sourceTree = "<group>"; };
 		577658AF2B01D20A00F6F2AF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		577658B12B01D21400F6F2AF /* UserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserViewController.storyboard; sourceTree = "<group>"; };
+		578A136D2B18237400C2B5E0 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
 		578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
 		578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectToShow.swift; sourceTree = "<group>"; };
@@ -195,6 +197,14 @@
 				5776589D2B01CD7B00F6F2AF /* TabBarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		578A136C2B18235E00C2B5E0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				578A136D2B18237400C2B5E0 /* AudioPlayer.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		578F86E42B0C4F9900A2CFC0 /* NumberCollectionViewCell */ = {
@@ -377,6 +387,7 @@
 		579D80C02B0167C20082AFED /* PraiseSongs */ = {
 			isa = PBXGroup;
 			children = (
+				578A136C2B18235E00C2B5E0 /* Utilities */,
 				577658AB2B01D1E400F6F2AF /* PraiseSongsViewController.swift */,
 				577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */,
 			);
@@ -728,6 +739,7 @@
 				57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */,
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,
 				5791C6082B123D10005A3ED5 /* UserPreferences.swift in Sources */,
+				578A136E2B18237400C2B5E0 /* AudioPlayer.swift in Sources */,
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
 				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
