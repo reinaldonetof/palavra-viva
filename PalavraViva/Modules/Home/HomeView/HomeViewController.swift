@@ -50,9 +50,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell ?? UITableViewCell()
         }
         if list[indexPath.row].type == BooksTableViewCell.identifier {
+            guard let books = list[indexPath.row].values as? Books else { return UITableViewCell() }
             let cell = tableView.dequeueReusableCell(withIdentifier: BooksTableViewCell.identifier, for: indexPath) as? BooksTableViewCell
             cell?.delegate = self
-            cell?.setupCell(books: list[indexPath.row].values as! Books)
+            cell?.setupCell(books: books)
             return cell ?? UITableViewCell()
         }
         return UITableViewCell()
