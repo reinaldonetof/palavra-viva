@@ -62,6 +62,10 @@
 		57EDACD82B05D1B00040F792 /* CardBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EDACD62B05D1B00040F792 /* CardBookCollectionViewCell.xib */; };
 		57F6E6712B1ACB4800EDE539 /* music.json in Resources */ = {isa = PBXBuildFile; fileRef = 57F6E6702B1ACB4800EDE539 /* music.json */; };
 		57F6E6742B1ACC8700EDE539 /* PraiseSongsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6E6732B1ACC8700EDE539 /* PraiseSongsService.swift */; };
+		57F6E6772B1ACE8A00EDE539 /* Musics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6E6762B1ACE8A00EDE539 /* Musics.swift */; };
+		57F6E67A2B1AD01800EDE539 /* PraiseSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6E6792B1AD01800EDE539 /* PraiseSongsViewModel.swift */; };
+		57F6E67E2B1AE18100EDE539 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6E67C2B1AE18100EDE539 /* SongTableViewCell.swift */; };
+		57F6E67F2B1AE18100EDE539 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57F6E67D2B1AE18100EDE539 /* SongTableViewCell.xib */; };
 		57FA76592B13D8CF003A44E6 /* VerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76572B13D8CF003A44E6 /* VerseTableViewCell.swift */; };
 		57FA765A2B13D8CF003A44E6 /* VerseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FA76582B13D8CF003A44E6 /* VerseTableViewCell.xib */; };
 		57FA765C2B13D9D1003A44E6 /* book-verse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57FA765B2B13D9D1003A44E6 /* book-verse.json */; };
@@ -145,6 +149,10 @@
 		57EDACD62B05D1B00040F792 /* CardBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardBookCollectionViewCell.xib; sourceTree = "<group>"; };
 		57F6E6702B1ACB4800EDE539 /* music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music.json; sourceTree = "<group>"; };
 		57F6E6732B1ACC8700EDE539 /* PraiseSongsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseSongsService.swift; sourceTree = "<group>"; };
+		57F6E6762B1ACE8A00EDE539 /* Musics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musics.swift; sourceTree = "<group>"; };
+		57F6E6792B1AD01800EDE539 /* PraiseSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseSongsViewModel.swift; sourceTree = "<group>"; };
+		57F6E67C2B1AE18100EDE539 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		57F6E67D2B1AE18100EDE539 /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		57FA76572B13D8CF003A44E6 /* VerseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseTableViewCell.swift; sourceTree = "<group>"; };
 		57FA76582B13D8CF003A44E6 /* VerseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerseTableViewCell.xib; sourceTree = "<group>"; };
 		57FA765B2B13D9D1003A44E6 /* book-verse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "book-verse.json"; sourceTree = "<group>"; };
@@ -392,6 +400,8 @@
 		579D80C02B0167C20082AFED /* PraiseSongs */ = {
 			isa = PBXGroup;
 			children = (
+				57F6E67B2B1AE15A00EDE539 /* Cells */,
+				57F6E6782B1ACFFB00EDE539 /* ViewModel */,
 				57F6E6722B1ACC6900EDE539 /* Service */,
 				578A136C2B18235E00C2B5E0 /* Utilities */,
 				577658AB2B01D1E400F6F2AF /* PraiseSongsViewController.swift */,
@@ -543,8 +553,26 @@
 				57EDACCC2B05C2440040F792 /* Books.swift */,
 				57FA765D2B13DBE6003A44E6 /* Chapter.swift */,
 				578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */,
+				57F6E6762B1ACE8A00EDE539 /* Musics.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		57F6E6782B1ACFFB00EDE539 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57F6E6792B1AD01800EDE539 /* PraiseSongsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		57F6E67B2B1AE15A00EDE539 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				57F6E67C2B1AE18100EDE539 /* SongTableViewCell.swift */,
+				57F6E67D2B1AE18100EDE539 /* SongTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		57FA76552B13D89F003A44E6 /* Cells */ = {
@@ -696,6 +724,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F6E67F2B1AE18100EDE539 /* SongTableViewCell.xib in Resources */,
 				576F44B72B02FEEA0029A54D /* books.json in Resources */,
 				577658AE2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard in Resources */,
 				577658A22B01CDE200F6F2AF /* HomeViewController.storyboard in Resources */,
@@ -767,13 +796,16 @@
 				57EDACC02B0592150040F792 /* UITextField+Extension.swift in Sources */,
 				577658A82B01D1B700F6F2AF /* NearChurchsViewController.swift in Sources */,
 				577658A42B01D16A00F6F2AF /* DailyDevotionalViewController.swift in Sources */,
+				57F6E67E2B1AE18100EDE539 /* SongTableViewCell.swift in Sources */,
 				57FA76642B1425CF003A44E6 /* UserPreferenceViewController.swift in Sources */,
 				577658AC2B01D1E400F6F2AF /* PraiseSongsViewController.swift in Sources */,
 				57FA76592B13D8CF003A44E6 /* VerseTableViewCell.swift in Sources */,
+				57F6E6772B1ACE8A00EDE539 /* Musics.swift in Sources */,
 				57EDACD12B05C7740040F792 /* HomeViewModel.swift in Sources */,
 				57EDACD32B05D0850040F792 /* Alert.swift in Sources */,
 				57FA76682B143799003A44E6 /* NSNotification.Name+Extension.swift in Sources */,
 				578F86EF2B0C5A9100A2CFC0 /* ObjectToShow.swift in Sources */,
+				57F6E67A2B1AD01800EDE539 /* PraiseSongsViewModel.swift in Sources */,
 				57EDACB92B058F080040F792 /* SearchTableViewCell.swift in Sources */,
 				57FA765E2B13DBE6003A44E6 /* Chapter.swift in Sources */,
 			);

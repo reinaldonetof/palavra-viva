@@ -16,22 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnT-YH-tdd">
-                                <rect key="frame" x="159" y="421" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="tappedPlayButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="f6R-JZ-PIL"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7oS-jn-x9r">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mnT-YH-tdd" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="L8U-Co-LHB"/>
-                            <constraint firstItem="mnT-YH-tdd" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="eVm-g9-78N"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7oS-jn-x9r" secondAttribute="trailing" id="ANS-oa-I8g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7oS-jn-x9r" secondAttribute="bottom" id="Qio-M9-bRU"/>
+                            <constraint firstItem="7oS-jn-x9r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XM2-fx-0ql"/>
+                            <constraint firstItem="7oS-jn-x9r" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gX0-dw-7NQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7oS-jn-x9r" id="gAr-sM-yWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

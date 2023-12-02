@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="SongTableViewCell" customModule="PalavraViva" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="558" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="558" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w81-ry-YZY">
+                        <rect key="frame" x="20" y="8" width="518" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="onl-IX-sFT">
+                                <rect key="frame" x="4" y="8" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="hTV-Ol-oc0"/>
+                                    <constraint firstAttribute="height" constant="80" id="oU4-YH-lOL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="É Tudo Sobre Você - Ao Vivo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5E-2C-0dm">
+                                <rect key="frame" x="92" y="8" width="218" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAD-XX-geV">
+                                <rect key="frame" x="92" y="33" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-tQ-b8T">
+                                <rect key="frame" x="134" y="58" width="324" height="34"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-o1-vjR">
+                                <rect key="frame" x="468" y="64" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb2-lv-ezV">
+                                <rect key="frame" x="474" y="8" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9E9-8L-3eQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="KI7-wX-F1k"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="spotify"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbp-r0-uTc">
+                                <rect key="frame" x="92" y="56" width="32" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Cza-mV-n23"/>
+                                    <constraint firstAttribute="width" constant="32" id="Huy-cP-ejv"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="onl-IX-sFT" secondAttribute="bottom" constant="8" id="8Jh-OD-hPL"/>
+                            <constraint firstItem="sb2-lv-ezV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZAD-XX-geV" secondAttribute="trailing" constant="8" id="B2K-Fa-KRn"/>
+                            <constraint firstItem="ZAD-XX-geV" firstAttribute="leading" secondItem="m5E-2C-0dm" secondAttribute="leading" id="CFE-4n-FLA"/>
+                            <constraint firstItem="5Bj-o1-vjR" firstAttribute="centerY" secondItem="VhL-tQ-b8T" secondAttribute="centerY" id="EWy-vn-1sz"/>
+                            <constraint firstItem="m5E-2C-0dm" firstAttribute="top" secondItem="onl-IX-sFT" secondAttribute="top" id="LHA-4t-Q36"/>
+                            <constraint firstAttribute="trailing" secondItem="5Bj-o1-vjR" secondAttribute="trailing" constant="4" id="NWw-se-jPb"/>
+                            <constraint firstItem="VhL-tQ-b8T" firstAttribute="top" secondItem="ZAD-XX-geV" secondAttribute="bottom" constant="4" id="PGT-y9-aNY"/>
+                            <constraint firstItem="onl-IX-sFT" firstAttribute="top" secondItem="w81-ry-YZY" secondAttribute="top" constant="8" id="Tmo-wO-bFH"/>
+                            <constraint firstItem="Dbp-r0-uTc" firstAttribute="leading" secondItem="ZAD-XX-geV" secondAttribute="leading" id="WCn-5i-aGh"/>
+                            <constraint firstItem="VhL-tQ-b8T" firstAttribute="leading" secondItem="Dbp-r0-uTc" secondAttribute="trailing" constant="12" id="XOn-Ts-VYa"/>
+                            <constraint firstItem="5Bj-o1-vjR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sb2-lv-ezV" secondAttribute="bottom" constant="8" id="bFI-Wf-1NO"/>
+                            <constraint firstItem="sb2-lv-ezV" firstAttribute="top" secondItem="m5E-2C-0dm" secondAttribute="top" id="fu3-UR-opn"/>
+                            <constraint firstItem="Dbp-r0-uTc" firstAttribute="top" secondItem="ZAD-XX-geV" secondAttribute="bottom" constant="2" id="fuM-FS-sda"/>
+                            <constraint firstItem="sb2-lv-ezV" firstAttribute="trailing" secondItem="5Bj-o1-vjR" secondAttribute="trailing" id="gy9-HJ-72B"/>
+                            <constraint firstItem="onl-IX-sFT" firstAttribute="leading" secondItem="w81-ry-YZY" secondAttribute="leading" constant="4" id="kw1-0Z-y2c"/>
+                            <constraint firstItem="5Bj-o1-vjR" firstAttribute="leading" secondItem="VhL-tQ-b8T" secondAttribute="trailing" constant="12" id="onG-kY-Ugx"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VhL-tQ-b8T" secondAttribute="bottom" constant="4" id="pTQ-0W-e9u"/>
+                            <constraint firstItem="m5E-2C-0dm" firstAttribute="leading" secondItem="onl-IX-sFT" secondAttribute="trailing" constant="8" id="pqa-Dt-yC4"/>
+                            <constraint firstItem="sb2-lv-ezV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m5E-2C-0dm" secondAttribute="trailing" constant="8" id="tus-M8-B7O"/>
+                            <constraint firstItem="onl-IX-sFT" firstAttribute="centerY" secondItem="w81-ry-YZY" secondAttribute="centerY" id="uHW-dw-Jqi"/>
+                            <constraint firstItem="ZAD-XX-geV" firstAttribute="top" secondItem="m5E-2C-0dm" secondAttribute="bottom" constant="4" id="wGN-0g-Kuo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w81-ry-YZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="6uu-WT-EtW"/>
+                    <constraint firstItem="w81-ry-YZY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9Nt-7S-elS"/>
+                    <constraint firstAttribute="trailing" secondItem="w81-ry-YZY" secondAttribute="trailing" constant="20" id="UXU-mN-f6v"/>
+                    <constraint firstAttribute="bottom" secondItem="w81-ry-YZY" secondAttribute="bottom" id="dQg-Pw-98Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="311.4503816793893" y="12.323943661971832"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="spotify" width="512" height="512"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
