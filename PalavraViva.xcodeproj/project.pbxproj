@@ -60,6 +60,8 @@
 		57EDACD32B05D0850040F792 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACD22B05D0850040F792 /* Alert.swift */; };
 		57EDACD72B05D1B00040F792 /* CardBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDACD52B05D1B00040F792 /* CardBookCollectionViewCell.swift */; };
 		57EDACD82B05D1B00040F792 /* CardBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EDACD62B05D1B00040F792 /* CardBookCollectionViewCell.xib */; };
+		57F6E6712B1ACB4800EDE539 /* music.json in Resources */ = {isa = PBXBuildFile; fileRef = 57F6E6702B1ACB4800EDE539 /* music.json */; };
+		57F6E6742B1ACC8700EDE539 /* PraiseSongsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6E6732B1ACC8700EDE539 /* PraiseSongsService.swift */; };
 		57FA76592B13D8CF003A44E6 /* VerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA76572B13D8CF003A44E6 /* VerseTableViewCell.swift */; };
 		57FA765A2B13D8CF003A44E6 /* VerseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FA76582B13D8CF003A44E6 /* VerseTableViewCell.xib */; };
 		57FA765C2B13D9D1003A44E6 /* book-verse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57FA765B2B13D9D1003A44E6 /* book-verse.json */; };
@@ -141,6 +143,8 @@
 		57EDACD22B05D0850040F792 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		57EDACD52B05D1B00040F792 /* CardBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		57EDACD62B05D1B00040F792 /* CardBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardBookCollectionViewCell.xib; sourceTree = "<group>"; };
+		57F6E6702B1ACB4800EDE539 /* music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music.json; sourceTree = "<group>"; };
+		57F6E6732B1ACC8700EDE539 /* PraiseSongsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseSongsService.swift; sourceTree = "<group>"; };
 		57FA76572B13D8CF003A44E6 /* VerseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseTableViewCell.swift; sourceTree = "<group>"; };
 		57FA76582B13D8CF003A44E6 /* VerseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerseTableViewCell.xib; sourceTree = "<group>"; };
 		57FA765B2B13D9D1003A44E6 /* book-verse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "book-verse.json"; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				576F44B62B02FEEA0029A54D /* books.json */,
 				576F44B82B02FF730029A54D /* book-with-comment.json */,
 				57FA765B2B13D9D1003A44E6 /* book-verse.json */,
+				57F6E6702B1ACB4800EDE539 /* music.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 		579D80892B0166A90082AFED /* PalavraViva */ = {
 			isa = PBXGroup;
 			children = (
+				57F6E6752B1ACCCE00EDE539 /* Models */,
 				57EDACBD2B0591EA0040F792 /* Utilities */,
 				576F44B52B02FEBF0029A54D /* Mocks */,
 				577658982B01C68D00F6F2AF /* TabBar */,
@@ -367,7 +373,6 @@
 		579D80BE2B0167B20082AFED /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				57EDACCB2B05C1DF0040F792 /* Models */,
 				579D80C42B0168610082AFED /* BookVersesView */,
 				578F86EA2B0C559400A2CFC0 /* HomeView */,
 				579D80C22B0168440082AFED /* BookChaptersView */,
@@ -387,6 +392,7 @@
 		579D80C02B0167C20082AFED /* PraiseSongs */ = {
 			isa = PBXGroup;
 			children = (
+				57F6E6722B1ACC6900EDE539 /* Service */,
 				578A136C2B18235E00C2B5E0 /* Utilities */,
 				577658AB2B01D1E400F6F2AF /* PraiseSongsViewController.swift */,
 				577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */,
@@ -514,16 +520,6 @@
 			path = BooksTableViewCell;
 			sourceTree = "<group>";
 		};
-		57EDACCB2B05C1DF0040F792 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				57EDACCC2B05C2440040F792 /* Books.swift */,
-				57FA765D2B13DBE6003A44E6 /* Chapter.swift */,
-				578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		57EDACD42B05D1850040F792 /* CardBookCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +527,24 @@
 				57EDACD62B05D1B00040F792 /* CardBookCollectionViewCell.xib */,
 			);
 			path = CardBookCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		57F6E6722B1ACC6900EDE539 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				57F6E6732B1ACC8700EDE539 /* PraiseSongsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		57F6E6752B1ACCCE00EDE539 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57EDACCC2B05C2440040F792 /* Books.swift */,
+				57FA765D2B13DBE6003A44E6 /* Chapter.swift */,
+				578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		57FA76552B13D89F003A44E6 /* Cells */ = {
@@ -687,6 +701,7 @@
 				577658A22B01CDE200F6F2AF /* HomeViewController.storyboard in Resources */,
 				579D80972B0166AA0082AFED /* LaunchScreen.storyboard in Resources */,
 				57FA765C2B13D9D1003A44E6 /* book-verse.json in Resources */,
+				57F6E6712B1ACB4800EDE539 /* music.json in Resources */,
 				577658AA2B01D1C500F6F2AF /* NearChurchsViewController.storyboard in Resources */,
 				57E285042B16D1E60000B345 /* GoogleService-Info.plist in Resources */,
 				57EDACD82B05D1B00040F792 /* CardBookCollectionViewCell.xib in Resources */,
@@ -732,6 +747,7 @@
 				57FA76612B13E10F003A44E6 /* BookVerseService.swift in Sources */,
 				57EDACCF2B05C63F0040F792 /* HomeService.swift in Sources */,
 				57EDACC92B05C14D0040F792 /* BooksTableViewCell.swift in Sources */,
+				57F6E6742B1ACC8700EDE539 /* PraiseSongsService.swift in Sources */,
 				578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */,
 				5791C6062B123A4D005A3ED5 /* BookVersesViewModel.swift in Sources */,
 				57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */,
