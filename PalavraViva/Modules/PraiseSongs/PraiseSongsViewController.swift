@@ -27,6 +27,7 @@ class PraiseSongsViewController: UIViewController {
                 print("Deu erro \(failure)")
             }
         }
+        print("Final do didLoad")
         // Do any additional setup after loading the view.
     }
     
