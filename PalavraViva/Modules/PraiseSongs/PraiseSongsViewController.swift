@@ -24,6 +24,7 @@ class PraiseSongsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(SongTableViewCell.nib(), forCellReuseIdentifier: SongTableViewCell.identifier)
+        tableView.separatorStyle = .none
     }
 
 }

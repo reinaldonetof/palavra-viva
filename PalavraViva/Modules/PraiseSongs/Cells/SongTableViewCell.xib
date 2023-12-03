@@ -65,6 +65,7 @@
                                     <constraint firstAttribute="height" constant="32" id="Cza-mV-n23"/>
                                     <constraint firstAttribute="width" constant="32" id="Huy-cP-ejv"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
@@ -105,12 +106,26 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bandNameLabel" destination="ZAD-XX-geV" id="x6w-2y-ckq"/>
+                <outlet property="containerCard" destination="w81-ry-YZY" id="Y2I-NY-hYH"/>
+                <outlet property="containerCell" destination="H2p-sc-9uM" id="ij0-90-HUs"/>
+                <outlet property="imageSong" destination="onl-IX-sFT" id="gzi-jJ-tHS"/>
+                <outlet property="playButton" destination="Dbp-r0-uTc" id="792-cB-CWi"/>
+                <outlet property="slider" destination="VhL-tQ-b8T" id="Opd-If-NOc"/>
+                <outlet property="songNameLabel" destination="m5E-2C-0dm" id="0qv-23-5ue"/>
+                <outlet property="spotifyButton" destination="sb2-lv-ezV" id="hzz-1K-4e3"/>
+                <outlet property="timeLabel" destination="5Bj-o1-vjR" id="26N-kh-BBj"/>
+            </connections>
             <point key="canvasLocation" x="311.4503816793893" y="12.323943661971832"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="spotify" width="512" height="512"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
