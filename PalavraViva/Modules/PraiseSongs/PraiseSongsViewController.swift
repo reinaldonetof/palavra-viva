@@ -36,7 +36,7 @@ extension PraiseSongsViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SongTableViewCell.identifier, for: indexPath) as? SongTableViewCell
-//        cell?.setupCell(data: <#code#>)
+        cell?.setupCell(music: viewModel.getMusic(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
 }

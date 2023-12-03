@@ -38,6 +38,7 @@
 		579D80A22B0166AB0082AFED /* PalavraVivaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80A12B0166AB0082AFED /* PalavraVivaTests.swift */; };
 		579D80AC2B0166AB0082AFED /* PalavraVivaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */; };
 		579D80AE2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */; };
+		57A7EBA02B1D18FA003CD6C1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7EB9F2B1D18FA003CD6C1 /* Utils.swift */; };
 		57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */; };
 		57CC99F62B0EFB5C00FC599D /* BookVersesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */; };
 		57E09E362B0863E8005267CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 57E09E352B0863E8005267CE /* Alamofire */; };
@@ -129,6 +130,7 @@
 		579D80A72B0166AB0082AFED /* PalavraVivaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalavraVivaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITests.swift; sourceTree = "<group>"; };
 		579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57A7EB9F2B1D18FA003CD6C1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVersesTableViewController.swift; sourceTree = "<group>"; };
 		57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookVersesTableViewController.storyboard; sourceTree = "<group>"; };
 		57E09E382B0865ED005267CE /* GlobalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalPreferences.swift; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 				57EDACD22B05D0850040F792 /* Alert.swift */,
 				57E09E382B0865ED005267CE /* GlobalPreferences.swift */,
 				5791C6072B123D10005A3ED5 /* UserPreferences.swift */,
+				57A7EB9F2B1D18FA003CD6C1 /* Utils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,
 				5791C6082B123D10005A3ED5 /* UserPreferences.swift in Sources */,
 				578A136E2B18237400C2B5E0 /* AudioPlayer.swift in Sources */,
+				57A7EBA02B1D18FA003CD6C1 /* Utils.swift in Sources */,
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
 				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,

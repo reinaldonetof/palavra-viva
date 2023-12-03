@@ -59,6 +59,23 @@ class SongTableViewCell: UITableViewCell {
         startLoading()
     }
     
+    func setupCell(music: MusicElement) {
+        songNameLabel.text = music.data.trackUnion.name
+        bandNameLabel.text = music.data.trackUnion.firstArtist.items[0].profile.name
+        setupImage(url: music.data.trackUnion.firstArtist.items[0].visuals.avatarImage.sources[0].url)
+    }
+    
+    func setupImage(url: String) {
+        Utils.loadImage(imageUrl: url) { result in
+            switch result {
+            case let .success(success):
+                self.imageSong.image = success
+            case let .failure(failure):
+               print(failure)
+            }
+        }
+    }
+    
     func startLoading() {
         activityIndicator?.startAnimating()
         playButton.isEnabled = false
