@@ -12,13 +12,13 @@ import UIKit
 class AudioPlayer {
     private var audioQueue: [String: AVAudioPlayer] = [:]
 
-    func loadAudio(url: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func loadAudio(url: String, completion: @escaping completion<Bool>) {
         guard let fileURL = URL(string: url) else { return completion(.success(false)) }
         URLSession.shared.dataTask(with: fileURL) { data, _, error in
             DispatchQueue.main.async {
                 if let error = error {
                     print("Error:", error)
-                    completion(.failure(error))
+                    completion(.failure(.error(description: error.localizedDescription)))
                     return
                 }
 
@@ -33,7 +33,7 @@ class AudioPlayer {
                 } catch {
                     print("Error:")
                     print(error)
-                    completion(.failure(error))
+                    completion(.failure(.error(description: error.localizedDescription)))
                 }
             }
         }.resume()

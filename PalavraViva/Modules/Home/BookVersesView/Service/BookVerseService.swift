@@ -9,7 +9,7 @@ import Alamofire
 import Foundation
 
 class BookVerseService {
-    func getVerses(book: Book, chapter: Int, completion: @escaping (Result<[Verse], Error>) -> Void) {
+    func getVerses(book: Book, chapter: Int, completion: @escaping completion<[Verse]>) {
         switch GlobalPreferences.serviceType {
         case .api:
             let version = UserPreferences.getVersion()
@@ -20,7 +20,7 @@ class BookVerseService {
                     let verses: [Verse] = chapter.verses
                     completion(.success(verses))
                 case let .failure(failure):
-                    completion(.failure(failure))
+                    completion(.failure(.error(description: failure.localizedDescription)))
                 }
             }
         default:
@@ -31,7 +31,7 @@ class BookVerseService {
                     let verses: [Verse] = chapter.verses
                     completion(.success(verses))
                 } catch {
-                    completion(.failure(error))
+                    completion(.failure(.error(description: error.localizedDescription)))
                 }
             }
         }

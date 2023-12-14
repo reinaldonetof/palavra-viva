@@ -106,7 +106,7 @@ extension BookVersesTableViewController: BookVersesViewModelProtocol {
 
     func errorRequest(error: Error) {
         print(error)
-        Alert().setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
+        Alert.setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
         refreshControl?.endRefreshing()
     }
 }

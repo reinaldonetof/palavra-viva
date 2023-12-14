@@ -66,12 +66,13 @@ class SongTableViewCell: UITableViewCell {
     }
     
     func setupImage(url: String) {
-        Utils.loadImage(imageUrl: url) { result in
+        Utils.loadImage(imageUrl: url) { [weak self] result in
+            guard let self else { return }
             switch result {
             case let .success(success):
                 self.imageSong.image = success
             case let .failure(failure):
-               print(failure)
+                print(failure)
             }
         }
     }

@@ -8,14 +8,14 @@
 import Foundation
 
 class PraiseSongsService {
-    func getMusics(completion: @escaping (Result<Musics, Error>) -> Void) {
+    func getMusics(completion: @escaping completion<Musics>) {
         if let url = Bundle.main.url(forResource: "music", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let musics: Musics = try JSONDecoder().decode(Musics.self, from: data)
                 completion(.success(musics))
             } catch {
-                completion(.failure(error))
+                completion(.failure(.error(description: error.localizedDescription)))
             }
         }
     }

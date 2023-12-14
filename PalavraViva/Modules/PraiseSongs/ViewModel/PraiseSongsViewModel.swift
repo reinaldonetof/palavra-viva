@@ -25,8 +25,6 @@ class PraiseSongsViewModel {
                 self.musics = success
                 self.delegate?.successRequest()
             case .failure(let failure):
-                // delegate error request
-                print(failure)
                 self.delegate?.errorRequest(error: failure)
             }
         }

@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let vcString = String(describing: TabBarController.self)
         let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+            guard let self else { return }
             self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
         })
     }
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
             // Start the sign in flow!
             GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
                 guard let signInResult else {
-                    Alert().setNewAlert(target: self, title: "Alerta", message: "Error: \(error?.localizedDescription ?? "Usuário inválido")")
+                    Alert.setNewAlert(target: self, title: "Alerta", message: "Error: \(error?.localizedDescription ?? "Usuário inválido")")
                     return
                 }
                 print(signInResult)

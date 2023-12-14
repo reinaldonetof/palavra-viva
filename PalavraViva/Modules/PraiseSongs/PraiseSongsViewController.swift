@@ -47,7 +47,7 @@ extension PraiseSongsViewController: PraiseSongsViewModelProtocol {
     }
     
     func errorRequest(error: Error) {
-        Alert().setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
+        Alert.setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
     }
 }
 

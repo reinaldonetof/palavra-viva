@@ -13,9 +13,6 @@ class UserPreferenceViewController: UIViewController {
     @IBOutlet weak var fontSizeLabel: UILabel!
     @IBOutlet weak var sliderComponent: UISlider!
     
-    private var minimumSize = 10
-    private var maximumSize = 48
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
@@ -35,8 +32,8 @@ class UserPreferenceViewController: UIViewController {
         fontSizeDescriptionLabel.text = "Tamanho da Fonte"
         fontSizeLabel.text = String(UserPreferences.getFontSize())
         sliderComponent.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
-        sliderComponent.minimumValue = Float(minimumSize)
-        sliderComponent.maximumValue = Float(maximumSize)
+        sliderComponent.minimumValue = 10
+        sliderComponent.maximumValue = 48
         sliderComponent.value = Float(UserPreferences.getFontSize())
     }
     
