@@ -39,6 +39,7 @@ class SongTableViewCell: UITableViewCell {
         containerCard.backgroundColor = UIColor(red: 0.969, green: 0.973, blue: 0.98, alpha: 1)
         imageSong.image = UIImage(systemName: "music.quarternote.3")
         timeLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 17, weight: .regular)
+        timeLabel.text = "00:00"
         slider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
         configPlayButton()
     }

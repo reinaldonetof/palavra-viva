@@ -30,6 +30,11 @@ class SongViewModel {
     init(music: MusicElement) {
         self.music = music
         url = music.data.trackUnion.url
+        configObserver()
+    }
+    
+    func configObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handlePlayButton), name: .pausingAudio(url: url), object: nil)
     }
 
     func setupMusic(completion: @escaping completion<AVAudioPlayer>) {
@@ -50,7 +55,7 @@ class SongViewModel {
         return String(format: "%02d:%02d", minutes, remainingSeconds)
     }
 
-    func handlePlayButton() {
+    @objc func handlePlayButton() {
         let audioIsPlaying = audioPlayer.audioIsPlaying(url: url)
         if audioIsPlaying {
             audioPlayer.pauseAudio(url: url)

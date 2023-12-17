@@ -11,6 +11,7 @@ import UIKit
 
 class AudioPlayer {
     private var audioQueue: [String: AVAudioPlayer] = [:]
+    private var audioPlaying: String = ""
     
     static var shared: AudioPlayer = {
         let instance = AudioPlayer()
@@ -46,12 +47,17 @@ class AudioPlayer {
 
     func playAudio(url: String) {
         guard let audioPlayer = audioQueue[url] else { return }
+        if !audioPlaying.isEmpty {
+            NotificationCenter.default.post(name: .pausingAudio(url: audioPlaying), object: nil)
+        }
         audioPlayer.play()
+        audioPlaying = url
     }
 
     func pauseAudio(url: String) {
         guard let audioPlayer = audioQueue[url] else { return }
         audioPlayer.pause()
+        audioPlaying = ""
     }
 
     func audioIsPlaying(url: String) -> Bool {
