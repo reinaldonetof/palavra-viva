@@ -112,4 +112,14 @@ class SongTableViewCell: UITableViewCell {
         playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
     }
     
+    @IBAction func tappedPlayButton(_ sender: UIButton) {
+        guard let audioPlayer = viewModel?.data else { return }
+        if audioPlayer.isPlaying {
+            audioPlayer.pause()
+            configPlayIconButton()
+        } else {
+            audioPlayer.play()
+            configPauseIconButton()
+        }
+    }
 }

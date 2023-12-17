@@ -12,6 +12,8 @@ import AVFAudio
 class SongViewModel {
     private var music: MusicElement
     private var url: String
+    private var audioPlayer: AudioPlayer = AudioPlayer.shared
+    private(set) var data: AVAudioPlayer?
     
     init(music: MusicElement) {
         self.music = music
@@ -19,10 +21,11 @@ class SongViewModel {
     }
     
     func setupMusic(completion: @escaping completion<String>) {
-        AudioPlayer.shared.loadAudio(url: self.url) { result in
+        audioPlayer.loadAudio(url: url) { result in
             switch result {
             case let .success(success):
                 let duration = self.secondsToMinutesSeconds(success.duration)
+                self.data = success
                 completion(.success(duration))
             case let .failure(failure):
                 completion(.failure(failure))
@@ -35,4 +38,13 @@ class SongViewModel {
         let remainingSeconds = Int(seconds) % 60
         return String(format: "%02d:%02d", minutes, remainingSeconds)
     }
+    
+//    func handlePlayButton() {
+//        let audioIsPlaying = audioPlayer.audioIsPlaying(url: url)
+//        if(audioIsPlaying) {
+//            audioPlayer.pauseAudio(url: url)
+//        } else {
+//            audioPlayer.playAudio(url: url)
+//        }
+//    }
 }
