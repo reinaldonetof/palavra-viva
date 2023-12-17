@@ -25,16 +25,13 @@ class SongTableViewCell: UITableViewCell {
     }
     
     private var activityIndicator: UIActivityIndicatorView?
+    
+    private var viewModel: SongViewModel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
         configElements()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            self.stopLoading()
-            self.configPlayIconButton()
-        })
     }
     
     func configElements() {
@@ -60,9 +57,11 @@ class SongTableViewCell: UITableViewCell {
     }
     
     func setupCell(music: MusicElement) {
+        viewModel = SongViewModel(music: music)
         songNameLabel.text = music.data.trackUnion.name
         bandNameLabel.text = music.data.trackUnion.firstArtist.items[0].profile.name
         setupImage(url: music.data.trackUnion.firstArtist.items[0].visuals.avatarImage.sources[0].url)
+        setupMusic()
     }
     
     func setupImage(url: String) {
@@ -75,6 +74,24 @@ class SongTableViewCell: UITableViewCell {
                 print(failure)
             }
         }
+    }
+    
+    func setupMusic() {
+        viewModel?.setupMusic(completion: { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case let .success(success):
+                self.timeLabel.text = success
+            case let .failure(failure):
+                // TODO: figure out how to show an alert from a tableviewcell
+                // https://stackoverflow.com/questions/58421761/present-alert-controller-from-table-view-cell-across-multiple-view-controllers
+                // 2 ways: Use The notification center attached to navigation bar controller OR search for the parent view
+                // Alert.setNewAlert(target: self, title: "Oops", message: <#T##String#>)
+                print(failure.localizedDescription)
+            }
+            self.stopLoading()
+            self.configPlayIconButton()
+        })
     }
     
     func startLoading() {

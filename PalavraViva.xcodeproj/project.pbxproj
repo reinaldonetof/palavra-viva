@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570ED3862B2EB141006E2DED /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570ED3852B2EB141006E2DED /* SongViewModel.swift */; };
 		576F44B72B02FEEA0029A54D /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 576F44B62B02FEEA0029A54D /* books.json */; };
 		576F44B92B02FF730029A54D /* book-with-comment.json in Resources */ = {isa = PBXBuildFile; fileRef = 576F44B82B02FF730029A54D /* book-with-comment.json */; };
 		5776589A2B01CCFD00F6F2AF /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658992B01CCFD00F6F2AF /* TabBarController.storyboard */; };
@@ -95,6 +96,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		570ED3852B2EB141006E2DED /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		576F44B62B02FEEA0029A54D /* books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		576F44B82B02FF730029A54D /* book-with-comment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "book-with-comment.json"; sourceTree = "<group>"; };
 		577658992B01CCFD00F6F2AF /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
@@ -194,6 +196,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		570ED3832B2EB116006E2DED /* SongCell */ = {
+			isa = PBXGroup;
+			children = (
+				570ED3842B2EB123006E2DED /* ViewModel */,
+				57F6E67C2B1AE18100EDE539 /* SongTableViewCell.swift */,
+				57F6E67D2B1AE18100EDE539 /* SongTableViewCell.xib */,
+			);
+			path = SongCell;
+			sourceTree = "<group>";
+		};
+		570ED3842B2EB123006E2DED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				570ED3852B2EB141006E2DED /* SongViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		576F44B52B02FEBF0029A54D /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,8 +592,7 @@
 		57F6E67B2B1AE15A00EDE539 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				57F6E67C2B1AE18100EDE539 /* SongTableViewCell.swift */,
-				57F6E67D2B1AE18100EDE539 /* SongTableViewCell.xib */,
+				570ED3832B2EB116006E2DED /* SongCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -788,6 +807,7 @@
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,
 				5791C6082B123D10005A3ED5 /* UserPreferences.swift in Sources */,
 				578A136E2B18237400C2B5E0 /* AudioPlayer.swift in Sources */,
+				570ED3862B2EB141006E2DED /* SongViewModel.swift in Sources */,
 				57A7EBA02B1D18FA003CD6C1 /* Utils.swift in Sources */,
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
 				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,

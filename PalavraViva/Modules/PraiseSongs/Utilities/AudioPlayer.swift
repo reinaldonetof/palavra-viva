@@ -11,9 +11,14 @@ import UIKit
 
 class AudioPlayer {
     private var audioQueue: [String: AVAudioPlayer] = [:]
+    
+    static var shared: AudioPlayer = {
+        let instance = AudioPlayer()
+        return instance
+    }()
 
-    func loadAudio(url: String, completion: @escaping completion<Bool>) {
-        guard let fileURL = URL(string: url) else { return completion(.success(false)) }
+    func loadAudio(url: String, completion: @escaping completion<AVAudioPlayer>) {
+        guard let fileURL = URL(string: url) else { return completion(.failure(.error(description: "File URL not exist"))) }
         URLSession.shared.dataTask(with: fileURL) { data, _, error in
             DispatchQueue.main.async {
                 if let error = error {
@@ -24,12 +29,12 @@ class AudioPlayer {
 
                 do {
                     guard let data = data else {
-                        completion(.success(false))
+                        completion(.failure(.error(description: "Data not exist")))
                         return
                     }
                     let audioPlayer = try AVAudioPlayer(data: data)
                     self.audioQueue[url] = audioPlayer
-                    completion(.success(true))
+                    completion(.success(audioPlayer))
                 } catch {
                     print("Error:")
                     print(error)

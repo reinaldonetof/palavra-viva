@@ -50,28 +50,3 @@ extension PraiseSongsViewController: PraiseSongsViewModelProtocol {
         Alert.setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
     }
 }
-
-
-// MARK: - o que eu testei e deu certo para reproduzir o audio
-//    var audioPlayer: AudioPlayer = AudioPlayer()
-//    let url = "https://firebasestorage.googleapis.com/v0/b/palavra-viva-9434c.appspot.com/o/musics%2FHolyName%20-%20Fall%20On%20Your%20Knees%20(feat.%20Brook%20Reeves).mp3?alt=media&token=f29573c8-0d92-46e3-8d78-6f4ba945183b"
-//    audioPlayer.loadAudio(url: url) { result in
-//        switch result {
-//        case let .success(success):
-//            if success {
-//                print("Loaded")
-//            } else {
-//                print("Deu ruim")
-//            }
-//        case let .failure(failure):
-//            print("Deu erro \(failure)")
-//        }
-//    }
-//    print("Final do didLoad")
-//    if(audioPlayer.audioIsPlaying(url: url)) {
-//        let result = audioPlayer.pauseAudio(url: url)
-//        print(result)
-//    } else {
-//        let result = audioPlayer.playAudio(url: url)
-//        print(result)
-//    }
