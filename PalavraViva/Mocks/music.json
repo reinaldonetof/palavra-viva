@@ -5,7 +5,7 @@
             "id": "3mweCFJA6Ci17RjjzeBcdx",
             "uri": "spotify:track:3mweCFJA6Ci17RjjzeBcdx",
             "name": "Fall on Your Knees",
-			"url": "https://firebasestorage.googleapis.com/v0/b/palavra-viva-9434c.appspot.com/o/musics%2FHolyName%20-%20Fall%20On%20Your%20Knees%20(feat.%20Brook%20Reeves).mp3?alt=media&token=f29573c8-0d92-46e3-8d78-6f4ba945183b",
+            "url": "https://firebasestorage.googleapis.com/v0/b/palavra-viva-9434c.appspot.com/o/musics%2FHolyName%20-%20Fall%20On%20Your%20Knees%20(feat.%20Brook%20Reeves).mp3?alt=media&token=f29573c8-0d92-46e3-8d78-6f4ba945183b",
             "contentRating": {
                 "label": "NONE"
             },
@@ -59,64 +59,125 @@
         }
     }
 },
-{
-    "data": {
-        "trackUnion": {
-            "__typename": "Track",
-            "id": "47j8u38wfvxdQeRA7TBJrB",
-            "uri": "spotify:track:47j8u38wfvxdQeRA7TBJrB",
-            "name": "É Tudo Sobre Você - Ao Vivo",
-			"url": "https://firebasestorage.googleapis.com/v0/b/palavra-viva-9434c.appspot.com/o/musics%2FE%CC%81%20TUDO%20SOBRE%20VOCE%CC%82%20_%20MORADA%20(CLIPE%20OFICIAL).mp3?alt=media&token=43594292-3424-4cb1-968b-e8b87ea76b02",
-            "contentRating": {
-                "label": "NONE"
-            },
-            "duration": {
-                "totalMilliseconds": 496200
-            },
-            "playability": {
-                "playable": true,
-                "reason": "PLAYABLE"
-            },
-            "trackNumber": 7,
-            "playcount": "87646174",
-            "saved": false,
-            "sharingInfo": {
-                "shareUrl": "https://open.spotify.com/track/47j8u38wfvxdQeRA7TBJrB?si=Lc5Ay46VRzCYAzUFgQZezw",
-                "shareId": "Lc5Ay46VRzCYAzUFgQZezw"
-            },
-            "firstArtist": {
-                "totalCount": 1,
-                "items": [
-                    {
-                        "id": "2tswayWsUGjUwpvN8KRwuN",
-                        "uri": "spotify:artist:2tswayWsUGjUwpvN8KRwuN",
-                        "visuals": {
-                            "avatarImage": {
-                                "sources": [
-                                    {
-                                        "width": 640,
-                                        "height": 640,
-                                        "url": "https://i.scdn.co/image/ab6761610000e5ebf5ab51fc0e014d2d4337d87e"
-                                    },
-                                    {
-                                        "width": 160,
-                                        "height": 160,
-                                        "url": "https://i.scdn.co/image/ab6761610000f178f5ab51fc0e014d2d4337d87e"
-                                    },
-                                    {
-                                        "width": 320,
-                                        "height": 320,
-                                        "url": "https://i.scdn.co/image/ab67616100005174f5ab51fc0e014d2d4337d87e"
-                                    }
-                                ]
+    {
+        "data": {
+            "trackUnion": {
+                "__typename": "Track",
+                "id": "47j8u38wfvxdQeRA7TBJrB",
+                "uri": "spotify:track:47j8u38wfvxdQeRA7TBJrB",
+                "name": "É Tudo Sobre Você - Ao Vivo",
+                "url": "https://firebasestorage.googleapis.com/v0/b/palavra-viva-9434c.appspot.com/o/musics%2FE%CC%81%20TUDO%20SOBRE%20VOCE%CC%82%20_%20MORADA%20(CLIPE%20OFICIAL).mp3?alt=media&token=43594292-3424-4cb1-968b-e8b87ea76b02",
+                "contentRating": {
+                    "label": "NONE"
+                },
+                "duration": {
+                    "totalMilliseconds": 496200
+                },
+                "playability": {
+                    "playable": true,
+                    "reason": "PLAYABLE"
+                },
+                "trackNumber": 7,
+                "playcount": "87646174",
+                "saved": false,
+                "sharingInfo": {
+                    "shareUrl": "https://open.spotify.com/track/47j8u38wfvxdQeRA7TBJrB?si=Lc5Ay46VRzCYAzUFgQZezw",
+                    "shareId": "Lc5Ay46VRzCYAzUFgQZezw"
+                },
+                "firstArtist": {
+                    "totalCount": 1,
+                    "items": [
+                        {
+                            "id": "2tswayWsUGjUwpvN8KRwuN",
+                            "uri": "spotify:artist:2tswayWsUGjUwpvN8KRwuN",
+                            "visuals": {
+                                "avatarImage": {
+                                    "sources": [
+                                        {
+                                            "width": 640,
+                                            "height": 640,
+                                            "url": "https://i.scdn.co/image/ab6761610000e5ebf5ab51fc0e014d2d4337d87e"
+                                        },
+                                        {
+                                            "width": 160,
+                                            "height": 160,
+                                            "url": "https://i.scdn.co/image/ab6761610000f178f5ab51fc0e014d2d4337d87e"
+                                        },
+                                        {
+                                            "width": 320,
+                                            "height": 320,
+                                            "url": "https://i.scdn.co/image/ab67616100005174f5ab51fc0e014d2d4337d87e"
+                                        }
+                                    ]
+                                }
+                            },
+                            "profile": {
+                                "name": "MORADA"
                             }
-                        },
-                        "profile": {
-                            "name": "MORADA"
                         }
-                    }
-                ]
+                    ]
+                }
             }
         }
-    }
-}]
+    },
+    {
+        "data": {
+            "trackUnion": {
+                "__typename": "Track",
+                "id": "7ofj9JjyUFJ5loeIM9cijS",
+                "uri": "spotify:track:7ofj9JjyUFJ5loeIM9cijS",
+                "name": "Miracles",
+                "url": "https://firebasestorage.googleapis.com/v0/b/palavra-viva-9434c.appspot.com/o/musics%2FLecrae%20Miracles%20Official%20Music%20Video.mp3?alt=media&token=77128767-af81-4b28-9a8d-dd7eda01a367",
+                "contentRating": {
+                    "label": "NONE"
+                },
+                "duration": {
+                    "totalMilliseconds": 161856
+                },
+                "playability": {
+                    "playable": true,
+                    "reason": "PLAYABLE"
+                },
+                "trackNumber": 3,
+                "playcount": "2759236",
+                "saved": false,
+                "sharingInfo": {
+                    "shareUrl": "https://open.spotify.com/track/7ofj9JjyUFJ5loeIM9cijS?si=SQBD78X_TTutH5fWwsXIpg",
+                    "shareId": "SQBD78X_TTutH5fWwsXIpg"
+                },
+                "firstArtist": {
+                    "totalCount": 1,
+                    "items": [
+                        {
+                            "id": "77IKXFvO7SpWrq8hflrUXc",
+                            "uri": "spotify:artist:77IKXFvO7SpWrq8hflrUXc",
+                            "visuals": {
+                                "avatarImage": {
+                                    "sources": [
+                                        {
+                                            "width": 640,
+                                            "height": 640,
+                                            "url": "https://i.scdn.co/image/ab6761610000e5ebd460ec67fe43e79761f30643"
+                                        },
+                                        {
+                                            "width": 160,
+                                            "height": 160,
+                                            "url": "https://i.scdn.co/image/ab6761610000f178d460ec67fe43e79761f30643"
+                                        },
+                                        {
+                                            "width": 320,
+                                            "height": 320,
+                                            "url": "https://i.scdn.co/image/ab67616100005174d460ec67fe43e79761f30643"
+                                        }
+                                    ]
+                                }
+                            },
+                            "profile": {
+                                "name": "KB, Lecrae"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }]
