@@ -90,4 +90,8 @@ class SongViewModel {
             handleCurrentTime()
         }
     }
+    
+    func openSpotifyLink() -> String {
+        return music.data.trackUnion.sharingInfo.shareURL
+    }
 }

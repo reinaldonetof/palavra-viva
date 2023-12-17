@@ -120,7 +120,7 @@ class SongTableViewCell: UITableViewCell {
     func configPauseIconButton() {
         playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
     }
-    
+
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         guard let viewModel else { return }
         if let touchEvent = event.allTouches?.first {
@@ -138,6 +138,12 @@ class SongTableViewCell: UITableViewCell {
 
     @IBAction func tappedPlayButton(_ sender: UIButton) {
         viewModel?.handlePlayButton()
+    }
+
+    @IBAction func tappedSpotifyButton(_ sender: UIButton) {
+        guard let spotifyLink = viewModel?.openSpotifyLink() else { return }
+        guard let url = URL(string: spotifyLink) else { return }
+        UIApplication.shared.open(url)
     }
 }
 
