@@ -44,20 +44,23 @@ class AudioPlayer {
         }.resume()
     }
 
-    func playAudio(url: String) -> Bool {
-        guard let audioPlayer = audioQueue[url] else { return false }
+    func playAudio(url: String) {
+        guard let audioPlayer = audioQueue[url] else { return }
         audioPlayer.play()
-        return true
     }
 
-    func pauseAudio(url: String) -> Bool {
-        guard let audioPlayer = audioQueue[url] else { return false }
+    func pauseAudio(url: String) {
+        guard let audioPlayer = audioQueue[url] else { return }
         audioPlayer.pause()
-        return true
     }
 
     func audioIsPlaying(url: String) -> Bool {
         guard let audioPlayer = audioQueue[url] else { return false }
         return audioPlayer.isPlaying
+    }
+    
+    func changeCurrentTime(url: String, currentTime: Double) {
+        guard let audioPlayer = audioQueue[url] else { return }
+        audioPlayer.currentTime = currentTime
     }
 }

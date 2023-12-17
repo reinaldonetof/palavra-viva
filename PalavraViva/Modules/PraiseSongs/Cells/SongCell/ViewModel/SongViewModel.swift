@@ -5,46 +5,84 @@
 //  Created by Reinaldo Neto on 17/12/23.
 //
 
-import Foundation
 import AVFAudio
+import Foundation
 
+enum PlaybackState {
+    case playing
+    case paused
+}
+
+protocol SongViewModelProtocol: AnyObject {
+    func handlePlayback(state: PlaybackState)
+    func handleCurrentTime(currentTime: Double)
+}
 
 class SongViewModel {
     private var music: MusicElement
     private var url: String
     private var audioPlayer: AudioPlayer = AudioPlayer.shared
-    private(set) var data: AVAudioPlayer?
-    
+    private var data: AVAudioPlayer?
+    private weak var timer: Timer?
+
+    weak var delegate: SongViewModelProtocol?
+
     init(music: MusicElement) {
         self.music = music
-        self.url = music.data.trackUnion.url
+        url = music.data.trackUnion.url
     }
-    
-    func setupMusic(completion: @escaping completion<String>) {
+
+    func setupMusic(completion: @escaping completion<AVAudioPlayer>) {
         audioPlayer.loadAudio(url: url) { result in
             switch result {
             case let .success(success):
-                let duration = self.secondsToMinutesSeconds(success.duration)
                 self.data = success
-                completion(.success(duration))
+                completion(.success(success))
             case let .failure(failure):
                 completion(.failure(failure))
             }
         }
     }
-    
+
     func secondsToMinutesSeconds(_ seconds: Double) -> String {
         let minutes = Int(seconds) / 60
         let remainingSeconds = Int(seconds) % 60
         return String(format: "%02d:%02d", minutes, remainingSeconds)
     }
-    
-//    func handlePlayButton() {
-//        let audioIsPlaying = audioPlayer.audioIsPlaying(url: url)
-//        if(audioIsPlaying) {
-//            audioPlayer.pauseAudio(url: url)
-//        } else {
-//            audioPlayer.playAudio(url: url)
-//        }
-//    }
+
+    func handlePlayButton() {
+        let audioIsPlaying = audioPlayer.audioIsPlaying(url: url)
+        if audioIsPlaying {
+            audioPlayer.pauseAudio(url: url)
+            delegate?.handlePlayback(state: .paused)
+        } else {
+            audioPlayer.playAudio(url: url)
+            delegate?.handlePlayback(state: .playing)
+        }
+        handleCurrentTime()
+    }
+
+    func handleCurrentTime() {
+        guard let timer else {
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
+                self.delegate?.handleCurrentTime(currentTime: self.data?.currentTime ?? 00.0)
+            }
+            return
+        }
+        timer.invalidate()
+        self.timer = nil
+    }
+
+    func sliderChangingCurrentTime() {
+        guard let timer else { return }
+        timer.invalidate()
+        self.timer = nil
+    }
+
+    func sliderChangedCurrentTime(currentTime: Double) {
+        audioPlayer.changeCurrentTime(url: url, currentTime: currentTime)
+        if (audioPlayer.audioIsPlaying(url: url)) {
+            handleCurrentTime()
+        }
+    }
 }
