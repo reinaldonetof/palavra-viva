@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 import FirebaseCore
-//import FacebookCore
+import IQKeyboardManagerSwift
 import GoogleSignIn
 import UIKit
 
@@ -15,6 +15,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
         return true
     }
 

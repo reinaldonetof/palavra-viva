@@ -42,6 +42,7 @@
 		57A7EBA02B1D18FA003CD6C1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7EB9F2B1D18FA003CD6C1 /* Utils.swift */; };
 		57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */; };
 		57CC99F62B0EFB5C00FC599D /* BookVersesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */; };
+		57D5F64B2B328A2500D9CA55 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57D5F64A2B328A2500D9CA55 /* IQKeyboardManagerSwift */; };
 		57E09E362B0863E8005267CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 57E09E352B0863E8005267CE /* Alamofire */; };
 		57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E382B0865ED005267CE /* GlobalPreferences.swift */; };
 		57E09E3B2B086EEE005267CE /* BookChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */; };
@@ -172,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D5F64B2B328A2500D9CA55 /* IQKeyboardManagerSwift in Frameworks */,
 				57E284FF2B16C3890000B345 /* FirebaseDatabase in Frameworks */,
 				57E285022B16C4A40000B345 /* GoogleSignIn in Frameworks */,
 				57E09E362B0863E8005267CE /* Alamofire in Frameworks */,
@@ -652,6 +654,7 @@
 				57E284FC2B16C3890000B345 /* FirebaseAuth */,
 				57E284FE2B16C3890000B345 /* FirebaseDatabase */,
 				57E285012B16C4A40000B345 /* GoogleSignIn */,
+				57D5F64A2B328A2500D9CA55 /* IQKeyboardManagerSwift */,
 			);
 			productName = PalavraViva;
 			productReference = 579D80872B0166A90082AFED /* PalavraViva.app */;
@@ -729,6 +732,7 @@
 				57E09E342B0863E8005267CE /* XCRemoteSwiftPackageReference "Alamofire" */,
 				57E284FB2B16C3890000B345 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				57E285002B16C4A40000B345 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				57D5F6492B328A2500D9CA55 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 579D80882B0166A90082AFED /* Products */;
 			projectDirPath = "";
@@ -1169,6 +1173,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		57D5F6492B328A2500D9CA55 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		57E09E342B0863E8005267CE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1196,6 +1208,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		57D5F64A2B328A2500D9CA55 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57D5F6492B328A2500D9CA55 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		57E09E352B0863E8005267CE /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 57E09E342B0863E8005267CE /* XCRemoteSwiftPackageReference "Alamofire" */;
