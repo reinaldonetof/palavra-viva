@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signupButton: UIButton!
 
-    private var securePassword: Bool = true
+//    private var securePassword: Bool = true
     private var emailValid: Bool = false
     private var passwordValid: Bool = false
 
@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.borderWidth = 1.0
         passwordTextField.layer.cornerRadius = 4
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
         configSecurePassword()
 
@@ -40,12 +41,11 @@ class LoginViewController: UIViewController {
     }
 
     func configSecurePassword() {
-        passwordTextField.setRightIcon(UIImage(systemName: securePassword ? "eye.slash.fill" : "eye.fill"), #selector(handleTap(_:)), self)
-        passwordTextField.isSecureTextEntry = securePassword
+        passwordTextField.setRightIcon(UIImage(systemName: passwordTextField.isSecureTextEntry ? "eye.slash.fill" : "eye.fill"), #selector(handleTap(_:)), self)
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        securePassword = !securePassword
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
         configSecurePassword()
     }
 
@@ -82,6 +82,10 @@ class LoginViewController: UIViewController {
         submit()
     }
 
+    @IBAction func tappedSignUp(_ sender: UIButton) {
+        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+    }
+    
     @IBAction func tappedGoogle(_ sender: UIButton) {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         // Create Google Sign In configuration object.

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		570ED3862B2EB141006E2DED /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570ED3852B2EB141006E2DED /* SongViewModel.swift */; };
+		5738BF752B3344C200569FE4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5738BF742B3344C200569FE4 /* RegisterViewController.swift */; };
+		5738BF782B3345B300569FE4 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5738BF772B3345B300569FE4 /* RegisterScreen.swift */; };
 		576F44B72B02FEEA0029A54D /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 576F44B62B02FEEA0029A54D /* books.json */; };
 		576F44B92B02FF730029A54D /* book-with-comment.json in Resources */ = {isa = PBXBuildFile; fileRef = 576F44B82B02FF730029A54D /* book-with-comment.json */; };
 		5776589A2B01CCFD00F6F2AF /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658992B01CCFD00F6F2AF /* TabBarController.storyboard */; };
@@ -98,6 +100,8 @@
 
 /* Begin PBXFileReference section */
 		570ED3852B2EB141006E2DED /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		5738BF742B3344C200569FE4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5738BF772B3345B300569FE4 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		576F44B62B02FEEA0029A54D /* books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		576F44B82B02FF730029A54D /* book-with-comment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "book-with-comment.json"; sourceTree = "<group>"; };
 		577658992B01CCFD00F6F2AF /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
@@ -214,6 +218,14 @@
 				570ED3852B2EB141006E2DED /* SongViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5738BF762B33459E00569FE4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5738BF772B3345B300569FE4 /* RegisterScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		576F44B52B02FEBF0029A54D /* Mocks */ = {
@@ -389,6 +401,8 @@
 		579D80BC2B0166DF0082AFED /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				5738BF762B33459E00569FE4 /* Screen */,
+				5738BF742B3344C200569FE4 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -818,6 +832,7 @@
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
 				579D808F2B0166A90082AFED /* LoginViewController.swift in Sources */,
 				5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */,
+				5738BF782B3345B300569FE4 /* RegisterScreen.swift in Sources */,
 				579D808B2B0166A90082AFED /* AppDelegate.swift in Sources */,
 				579D808D2B0166A90082AFED /* SceneDelegate.swift in Sources */,
 				57E09E3B2B086EEE005267CE /* BookChaptersViewController.swift in Sources */,
@@ -834,6 +849,7 @@
 				57FA76682B143799003A44E6 /* NSNotification.Name+Extension.swift in Sources */,
 				578F86EF2B0C5A9100A2CFC0 /* ObjectToShow.swift in Sources */,
 				57F6E67A2B1AD01800EDE539 /* PraiseSongsViewModel.swift in Sources */,
+				5738BF752B3344C200569FE4 /* RegisterViewController.swift in Sources */,
 				57EDACB92B058F080040F792 /* SearchTableViewCell.swift in Sources */,
 				57FA765E2B13DBE6003A44E6 /* Chapter.swift in Sources */,
 			);
