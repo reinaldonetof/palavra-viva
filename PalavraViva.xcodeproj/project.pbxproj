@@ -32,8 +32,8 @@
 		5792D1812B0AABDD00CDBA86 /* ChaptersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5792D17F2B0AABDD00CDBA86 /* ChaptersTableViewCell.xib */; };
 		579D808B2B0166A90082AFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808A2B0166A90082AFED /* AppDelegate.swift */; };
 		579D808D2B0166A90082AFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808C2B0166A90082AFED /* SceneDelegate.swift */; };
-		579D808F2B0166A90082AFED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808E2B0166A90082AFED /* ViewController.swift */; };
-		579D80922B0166A90082AFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D80902B0166A90082AFED /* Main.storyboard */; };
+		579D808F2B0166A90082AFED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D808E2B0166A90082AFED /* LoginViewController.swift */; };
+		579D80922B0166A90082AFED /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D80902B0166A90082AFED /* LoginViewController.storyboard */; };
 		579D80942B0166AA0082AFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579D80932B0166AA0082AFED /* Assets.xcassets */; };
 		579D80972B0166AA0082AFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D80952B0166AA0082AFED /* LaunchScreen.storyboard */; };
 		579D80A22B0166AB0082AFED /* PalavraVivaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80A12B0166AB0082AFED /* PalavraVivaTests.swift */; };
@@ -122,8 +122,8 @@
 		579D80872B0166A90082AFED /* PalavraViva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PalavraViva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579D808A2B0166A90082AFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		579D808C2B0166A90082AFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		579D808E2B0166A90082AFED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		579D80912B0166A90082AFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		579D808E2B0166A90082AFED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		579D80912B0166A90082AFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginViewController.storyboard; sourceTree = "<group>"; };
 		579D80932B0166AA0082AFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579D80962B0166AA0082AFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579D80982B0166AA0082AFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,8 +335,6 @@
 				579D80BA2B0166BD0082AFED /* Modules */,
 				579D808A2B0166A90082AFED /* AppDelegate.swift */,
 				579D808C2B0166A90082AFED /* SceneDelegate.swift */,
-				579D808E2B0166A90082AFED /* ViewController.swift */,
-				579D80902B0166A90082AFED /* Main.storyboard */,
 				579D80932B0166AA0082AFED /* Assets.xcassets */,
 				579D80952B0166AA0082AFED /* LaunchScreen.storyboard */,
 				57E285032B16D1E60000B345 /* GoogleService-Info.plist */,
@@ -380,6 +378,8 @@
 		579D80BB2B0166C80082AFED /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				579D808E2B0166A90082AFED /* LoginViewController.swift */,
+				579D80902B0166A90082AFED /* LoginViewController.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -767,7 +767,7 @@
 				577658A62B01D17500F6F2AF /* DailyDevotionalViewController.storyboard in Resources */,
 				57FA76662B1425DD003A44E6 /* UserPreferenceViewController.storyboard in Resources */,
 				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
-				579D80922B0166A90082AFED /* Main.storyboard in Resources */,
+				579D80922B0166A90082AFED /* LoginViewController.storyboard in Resources */,
 				57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */,
 				57CC99F62B0EFB5C00FC599D /* BookVersesTableViewController.storyboard in Resources */,
 			);
@@ -812,7 +812,7 @@
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
 				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
-				579D808F2B0166A90082AFED /* ViewController.swift in Sources */,
+				579D808F2B0166A90082AFED /* LoginViewController.swift in Sources */,
 				5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */,
 				579D808B2B0166A90082AFED /* AppDelegate.swift in Sources */,
 				579D808D2B0166A90082AFED /* SceneDelegate.swift in Sources */,
@@ -868,12 +868,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		579D80902B0166A90082AFED /* Main.storyboard */ = {
+		579D80902B0166A90082AFED /* LoginViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				579D80912B0166A90082AFED /* Base */,
 			);
-			name = Main.storyboard;
+			name = LoginViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		579D80952B0166AA0082AFED /* LaunchScreen.storyboard */ = {
@@ -1012,7 +1012,7 @@
 				INFOPLIST_FILE = PalavraViva/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LoginViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1039,7 +1039,7 @@
 				INFOPLIST_FILE = PalavraViva/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LoginViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
