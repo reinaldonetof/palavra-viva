@@ -41,4 +41,18 @@ struct Utils {
             }
         }.resume()
     }
+    
+    static func isValidEmail(_ email: String?) -> Bool {
+        guard let email = email else { return false }
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
+    }
+    
+    static func isValidPassword(_ password: String?) -> Bool {
+        guard let password = password else { return false }
+        if password.count < 6 {
+            return false
+        }
+        return true
+    }
 }

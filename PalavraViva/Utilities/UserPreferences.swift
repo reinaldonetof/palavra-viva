@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 enum Preferences: String {
     case version
@@ -15,6 +16,13 @@ enum Preferences: String {
 }
 
 class UserPreferences {
+    static func getUserAuthenticated() -> User? {
+        guard let user = Auth.auth().currentUser else {
+            return nil
+        }
+        return user
+    }
+    
     static func updateUserDefaults(_ value: Any,_ key: Preferences) {
         UserDefaults.standard.set(value, forKey: key.rawValue)
     }

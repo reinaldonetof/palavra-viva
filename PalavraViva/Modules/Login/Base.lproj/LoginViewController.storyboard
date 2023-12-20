@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PalavraViva" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="PalavraViva" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,9 @@
                                 <rect key="frame" x="20" y="449.5" width="335" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="tappedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aws-X3-FCU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBT-8s-csY">
                                 <rect key="frame" x="20" y="500.5" width="335" height="35"/>
@@ -75,6 +78,9 @@
                                 <rect key="frame" x="20" y="570" width="335" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Login com Google"/>
+                                <connections>
+                                    <action selector="tappedGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGM-8Z-Qr2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -114,6 +120,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fgp-dB-Q2b"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="4d4-wK-2kg" id="Shl-MX-zeK"/>
+                        <outlet property="forgotPasswordButton" destination="x1y-NX-Kxb" id="eJi-eA-sWa"/>
+                        <outlet property="loginButton" destination="LZ2-SR-OFg" id="lHr-ua-pgF"/>
+                        <outlet property="passwordTextField" destination="nPO-7t-EUz" id="Jlb-bX-ahN"/>
+                        <outlet property="signupButton" destination="cBT-8s-csY" id="8Qj-nS-WMA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
