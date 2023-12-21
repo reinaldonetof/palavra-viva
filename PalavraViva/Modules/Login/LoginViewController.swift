@@ -39,6 +39,9 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
         configSecurePassword()
+        
+        // TODO: Missing the forgot password view controller
+        forgotPasswordButton.isHidden = true
 
         loginButton.isEnabled = false
     }
