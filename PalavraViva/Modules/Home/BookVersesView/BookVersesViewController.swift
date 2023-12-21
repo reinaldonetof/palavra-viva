@@ -146,6 +146,7 @@ extension BookVersesViewController: UITableViewDelegate, UITableViewDataSource {
 extension BookVersesViewController: BookVersesViewModelProtocol {
     func successRequestUniqueVerse(verseNumber: Int, text: String) {
         verseLabel.text = "\(verseNumber). \(text)"
+        verseLabel.font = UIFont.boldSystemFont(ofSize: CGFloat(UserPreferences.getFontSize()))
         overlayView.isHidden = false
     }
 
