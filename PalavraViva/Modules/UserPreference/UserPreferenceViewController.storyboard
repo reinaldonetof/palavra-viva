@@ -61,12 +61,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versão de consulta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvG-tg-GpG">
+                                <rect key="frame" x="20" y="145" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRE-gn-Hiw">
+                                <rect key="frame" x="332" y="140.66666666666666" width="41" height="30"/>
+                                <menu key="menu" id="mer-iI-D6J">
+                                    <children>
+                                        <command title="Item 1" id="n5b-lh-NuU"/>
+                                        <command title="Item 2" id="tyV-io-Tjx"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Nova Almeida Atualizada"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jRI-Aw-1RS" firstAttribute="leading" secondItem="5gL-up-4eF" secondAttribute="leading" id="1gz-Di-2kb"/>
+                            <constraint firstItem="uRE-gn-Hiw" firstAttribute="trailing" secondItem="1YF-E4-0WA" secondAttribute="trailing" id="4KB-Ll-AO8"/>
+                            <constraint firstItem="uRE-gn-Hiw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UvG-tg-GpG" secondAttribute="trailing" constant="8" id="Cky-G2-tUL"/>
                             <constraint firstItem="36b-78-WCE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CtR-mH-fgI"/>
+                            <constraint firstItem="UvG-tg-GpG" firstAttribute="leading" secondItem="jRI-Aw-1RS" secondAttribute="leading" id="Ee7-Mm-fKy"/>
                             <constraint firstItem="1YF-E4-0WA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jRI-Aw-1RS" secondAttribute="trailing" constant="8" id="Gel-FJ-bMy"/>
                             <constraint firstItem="Cad-z5-ETy" firstAttribute="leading" secondItem="5gL-up-4eF" secondAttribute="trailing" constant="12" id="O4a-Qa-Vav"/>
                             <constraint firstItem="5gL-up-4eF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="PzA-6J-gVs"/>
@@ -78,7 +97,9 @@
                             <constraint firstItem="1YF-E4-0WA" firstAttribute="centerY" secondItem="jRI-Aw-1RS" secondAttribute="centerY" id="olK-Tj-noh"/>
                             <constraint firstItem="JKm-Pk-UQT" firstAttribute="centerY" secondItem="Cad-z5-ETy" secondAttribute="centerY" id="qex-0O-aAf"/>
                             <constraint firstItem="1YF-E4-0WA" firstAttribute="trailing" secondItem="JKm-Pk-UQT" secondAttribute="trailing" id="rtQ-9J-RcB"/>
+                            <constraint firstItem="uRE-gn-Hiw" firstAttribute="centerY" secondItem="UvG-tg-GpG" secondAttribute="centerY" id="sFd-Z0-gmF"/>
                             <constraint firstItem="jRI-Aw-1RS" firstAttribute="top" secondItem="5gL-up-4eF" secondAttribute="bottom" constant="16" id="tz1-dI-wd0"/>
+                            <constraint firstItem="UvG-tg-GpG" firstAttribute="top" secondItem="jRI-Aw-1RS" secondAttribute="bottom" constant="16" id="yE3-KD-x6R"/>
                         </constraints>
                     </view>
                     <connections>
@@ -86,6 +107,7 @@
                         <outlet property="fontSizeLabel" destination="JKm-Pk-UQT" id="aJz-bZ-JSI"/>
                         <outlet property="logoutButton" destination="36b-78-WCE" id="pkQ-PH-K92"/>
                         <outlet property="primaryVersionButton" destination="1YF-E4-0WA" id="IoX-Cv-emS"/>
+                        <outlet property="secondaryVersionButton" destination="uRE-gn-Hiw" id="uYZ-BS-ifm"/>
                         <outlet property="sliderComponent" destination="Cad-z5-ETy" id="wbY-Kx-d8r"/>
                     </connections>
                 </viewController>

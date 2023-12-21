@@ -13,4 +13,5 @@ extension NSNotification.Name {
         return Self("pause-\(url)")
     }
     static let changePrimaryVersion = Self("changePrimaryVersion")
+    static let changeSecondaryVersion = Self("changeSecondaryVersion")
 }

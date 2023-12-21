@@ -8,12 +8,18 @@
 import Firebase
 import UIKit
 
+enum MenuType {
+    case primary
+    case secondary
+}
+
 class UserPreferenceViewController: UIViewController {
     @IBOutlet var fontSizeDescriptionLabel: UILabel!
     @IBOutlet var fontSizeLabel: UILabel!
     @IBOutlet var sliderComponent: UISlider!
     @IBOutlet var logoutButton: UIButton!
-    @IBOutlet weak var primaryVersionButton: UIButton!
+    @IBOutlet var primaryVersionButton: UIButton!
+    @IBOutlet var secondaryVersionButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,28 +44,47 @@ class UserPreferenceViewController: UIViewController {
         sliderComponent.maximumValue = 48
         sliderComponent.value = Float(UserPreferences.getFontSize())
         configPrimaryMenu()
+        configSecondaryMenu()
         logoutButton.tintColor = .red
     }
-    
-    func handleElementMenu(version: Versions) {
+
+    func handleElementMenuPrimary(version: Versions) {
         if version.rawValue != UserPreferences.getPrimaryVersion() {
             UserPreferences.updateUserDefaults(version.rawValue, .primaryVersion)
             NotificationCenter.default.post(name: .changePrimaryVersion, object: nil)
         }
     }
     
-    func configPrimaryMenu() {
-        let versionSelected = UserPreferences.getPrimaryVersion()
+    func handleElementMenuSecondary(version: Versions) {
+        if version.rawValue != UserPreferences.getSecondaryVersion() {
+            UserPreferences.updateUserDefaults(version.rawValue, .secondaryVersion)
+            NotificationCenter.default.post(name: .changeSecondaryVersion, object: nil)
+        }
+    }
+
+    func configMenuAndElements(title: String, versionSelected: String,_ type: MenuType) -> UIMenu {
         var elements: [UIAction] = []
         Versions.allCases.forEach({ version in
             let el = UIAction(title: UserPreferences.versionName(version), state: version.rawValue == versionSelected ? .on : .off) { _ in
-                self.handleElementMenu(version: version)
+                type == .primary ? self.handleElementMenuPrimary(version: version) : self.handleElementMenuSecondary(version: version)
             }
             elements.append(el)
         })
-        let menu = UIMenu(title: "Versão principal", children: elements)
+        return UIMenu(title: title, children: elements)
+    }
+
+    func configPrimaryMenu() {
+        let versionSelected = UserPreferences.getPrimaryVersion()
+        let menu = configMenuAndElements(title: "Versão principal", versionSelected: versionSelected, .primary)
         primaryVersionButton.showsMenuAsPrimaryAction = true
         primaryVersionButton.menu = menu
+    }
+
+    func configSecondaryMenu() {
+        let versionSelected = UserPreferences.getSecondaryVersion()
+        let menu = configMenuAndElements(title: "Versão de consulta", versionSelected: versionSelected, .secondary)
+        secondaryVersionButton.showsMenuAsPrimaryAction = true
+        secondaryVersionButton.menu = menu
     }
 
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
