@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signupButton: UIButton!
 
-//    private var securePassword: Bool = true
     private var emailValid: Bool = false
     private var passwordValid: Bool = false
 
