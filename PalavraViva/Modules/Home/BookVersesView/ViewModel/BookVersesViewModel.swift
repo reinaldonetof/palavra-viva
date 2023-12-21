@@ -10,7 +10,7 @@ import Foundation
 protocol BookVersesViewModelProtocol: AnyObject {
     func successRequest()
     func errorRequest(error: Error)
-    func successRequestUniqueVerse(text: String)
+    func successRequestUniqueVerse(verseNumber: Int, text: String)
     func errorRequestUniqueVerse(error: Error)
 }
 
@@ -58,7 +58,7 @@ class BookVersesViewModel {
             switch result {
             case let .success(success):
                 self.verse = success
-                self.delegate?.successRequestUniqueVerse(text: success)
+                self.delegate?.successRequestUniqueVerse(verseNumber: number, text: success)
             case let .failure(failure):
                 self.delegate?.errorRequestUniqueVerse(error: failure)
             }

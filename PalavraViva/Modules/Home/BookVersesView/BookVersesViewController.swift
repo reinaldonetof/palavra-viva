@@ -13,12 +13,25 @@ class BookVersesViewController: UIViewController {
     private var viewModel: BookVersesViewModel
     private var isShowing = false
     private var shouldReloadData = false
+    private var selectedRow: IndexPath?
 
     let overlayView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 0.824, green: 0.894, blue: 0.957, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.borderWidth = 0.3
+        view.layer.borderColor = UIColor.lightGray.cgColor
         return view
+    }()
+
+    lazy var verseLabel: UITextView = {
+        let label = UITextView()
+        label.isEditable = false
+        label.backgroundColor = UIColor(red: 0.824, green: 0.894, blue: 0.957, alpha: 1)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Verso selecionado"
+        label.font = UIFont.boldSystemFont(ofSize: CGFloat(UserPreferences.getFontSize()))
+        return label
     }()
 
     init?(coder: NSCoder, book: Book, chapterSelected: Int) {
@@ -40,11 +53,18 @@ class BookVersesViewController: UIViewController {
 
     func setupOverlayView() {
         view.addSubview(overlayView)
+        overlayView.addSubview(verseLabel)
         NSLayoutConstraint.activate([
             overlayView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             overlayView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             overlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            overlayView.heightAnchor.constraint(equalToConstant: 200),
+            overlayView.heightAnchor.constraint(equalToConstant: 272),
+            verseLabel.heightAnchor.constraint(equalToConstant: 240),
+
+            verseLabel.leadingAnchor.constraint(equalTo: overlayView.leadingAnchor, constant: 16),
+            verseLabel.trailingAnchor.constraint(equalTo: overlayView.trailingAnchor, constant: -16),
+            verseLabel.topAnchor.constraint(equalTo: overlayView.topAnchor, constant: 16),
+            verseLabel.bottomAnchor.constraint(equalTo: overlayView.bottomAnchor, constant: -16),
         ])
         overlayView.isHidden = true
     }
@@ -111,14 +131,22 @@ extension BookVersesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.fetchSecondaryVersion(indexPath: indexPath)
+        if selectedRow?.row == indexPath.row {
+            overlayView.isHidden = true
+            selectedRow = nil
+            tableView.cellForRow(at: indexPath)?.isSelected = false
+        } else {
+            tableView.cellForRow(at: indexPath)?.isSelected = true
+            selectedRow = indexPath
+            viewModel.fetchSecondaryVersion(indexPath: indexPath)
+        }
     }
 }
 
 extension BookVersesViewController: BookVersesViewModelProtocol {
-    func successRequestUniqueVerse(text: String) {
+    func successRequestUniqueVerse(verseNumber: Int, text: String) {
+        verseLabel.text = "\(verseNumber). \(text)"
         overlayView.isHidden = false
-        print(text)
     }
 
     func errorRequestUniqueVerse(error: Error) {
