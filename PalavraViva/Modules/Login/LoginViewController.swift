@@ -22,10 +22,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configElements()
+        RootNavigationController.shared.setNavigationController(navigationController: self.navigationController)
         if UserAuth.getSavedToken() != nil {
             navigateToTabBarController()
-        } else {
-            configElements()
         }
     }
 

@@ -46,6 +46,7 @@
 		57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */; };
 		57CC99F62B0EFB5C00FC599D /* BookVersesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */; };
 		57CDC4142B33ED75009A7F6C /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4132B33ED75009A7F6C /* UserAuth.swift */; };
+		57CDC4172B33F84A009A7F6C /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */; };
 		57D5F64B2B328A2500D9CA55 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57D5F64A2B328A2500D9CA55 /* IQKeyboardManagerSwift */; };
 		57E09E362B0863E8005267CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 57E09E352B0863E8005267CE /* Alamofire */; };
 		57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E382B0865ED005267CE /* GlobalPreferences.swift */; };
@@ -144,6 +145,7 @@
 		57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVersesTableViewController.swift; sourceTree = "<group>"; };
 		57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookVersesTableViewController.storyboard; sourceTree = "<group>"; };
 		57CDC4132B33ED75009A7F6C /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		57E09E382B0865ED005267CE /* GlobalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalPreferences.swift; sourceTree = "<group>"; };
 		57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChaptersViewController.swift; sourceTree = "<group>"; };
 		57E09E3C2B086F01005267CE /* BookChaptersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookChaptersViewController.storyboard; sourceTree = "<group>"; };
@@ -349,7 +351,6 @@
 				57F6E6752B1ACCCE00EDE539 /* Models */,
 				57EDACBD2B0591EA0040F792 /* Utilities */,
 				576F44B52B02FEBF0029A54D /* Mocks */,
-				577658982B01C68D00F6F2AF /* TabBar */,
 				579D80BA2B0166BD0082AFED /* Modules */,
 				579D808A2B0166A90082AFED /* AppDelegate.swift */,
 				579D808C2B0166A90082AFED /* SceneDelegate.swift */,
@@ -381,6 +382,7 @@
 		579D80BA2B0166BD0082AFED /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				57CDC4152B33F7EC009A7F6C /* Navigation */,
 				57FA76622B1425AB003A44E6 /* UserPreference */,
 				579D80C12B0167FA0082AFED /* User */,
 				579D80C02B0167C20082AFED /* PraiseSongs */,
@@ -482,6 +484,15 @@
 				57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */,
 			);
 			path = BookVersesView;
+			sourceTree = "<group>";
+		};
+		57CDC4152B33F7EC009A7F6C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				577658982B01C68D00F6F2AF /* TabBar */,
+				57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		57E09E3E2B0874B8005267CE /* ViewModel */ = {
@@ -827,6 +838,7 @@
 				57CDC4142B33ED75009A7F6C /* UserAuth.swift in Sources */,
 				5791C6062B123A4D005A3ED5 /* BookVersesViewModel.swift in Sources */,
 				57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */,
+				57CDC4172B33F84A009A7F6C /* RootNavigationController.swift in Sources */,
 				57E09E402B0874E1005267CE /* BookChaptersViewModel.swift in Sources */,
 				57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */,
 				57EDACCD2B05C2440040F792 /* Books.swift in Sources */,

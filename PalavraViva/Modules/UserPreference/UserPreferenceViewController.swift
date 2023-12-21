@@ -73,6 +73,7 @@ class UserPreferenceViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             UserAuth.removeSavedToken()
+            RootNavigationController.shared.navigationController()?.popToRootViewController(animated: true)
         } catch {
             Alert.setNewAlert(target: self, title: "Error", message: "Erro ao realizar o logout: \(error.localizedDescription)")
         }
