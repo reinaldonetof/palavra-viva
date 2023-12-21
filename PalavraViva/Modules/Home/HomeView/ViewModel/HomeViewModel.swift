@@ -39,7 +39,9 @@ class HomeViewModel {
                 oldTestament.books.append(book)
             }
         }
-        listToShow = [ObjectToShow(type: SearchTableViewCell.identifier), ObjectToShow(type: BooksTableViewCell.identifier, values: oldTestament), ObjectToShow(type: BooksTableViewCell.identifier, values: newTestament)]
+        //  TODO: Implement the search list then add SearchTableViewCell to list
+//        listToShow = [ObjectToShow(type: SearchTableViewCell.identifier), ObjectToShow(type: BooksTableViewCell.identifier, values: oldTestament), ObjectToShow(type: BooksTableViewCell.identifier, values: newTestament)]
+        listToShow = [ObjectToShow(type: BooksTableViewCell.identifier, values: oldTestament), ObjectToShow(type: BooksTableViewCell.identifier, values: newTestament)]
         self.delegate?.successRequest()
     }
 
