@@ -43,12 +43,12 @@
 		579D80AC2B0166AB0082AFED /* PalavraVivaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */; };
 		579D80AE2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */; };
 		57A7EBA02B1D18FA003CD6C1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7EB9F2B1D18FA003CD6C1 /* Utils.swift */; };
-		57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */; };
-		57CC99F62B0EFB5C00FC599D /* BookVersesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */; };
 		57CDC4142B33ED75009A7F6C /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4132B33ED75009A7F6C /* UserAuth.swift */; };
 		57CDC4172B33F84A009A7F6C /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */; };
 		57CDC41E2B341A2F009A7F6C /* UniqueVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC41D2B341A2F009A7F6C /* UniqueVerse.swift */; };
 		57CDC4212B3427B4009A7F6C /* unique-verse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57CDC4202B3427B4009A7F6C /* unique-verse.json */; };
+		57CDC4232B342ABE009A7F6C /* BookVersesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CDC4222B342ABD009A7F6C /* BookVersesViewController.storyboard */; };
+		57CDC4252B342AD6009A7F6C /* BookVersesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4242B342AD6009A7F6C /* BookVersesViewController.swift */; };
 		57D5F64B2B328A2500D9CA55 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57D5F64A2B328A2500D9CA55 /* IQKeyboardManagerSwift */; };
 		57E09E362B0863E8005267CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 57E09E352B0863E8005267CE /* Alamofire */; };
 		57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E382B0865ED005267CE /* GlobalPreferences.swift */; };
@@ -144,12 +144,12 @@
 		579D80AB2B0166AB0082AFED /* PalavraVivaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITests.swift; sourceTree = "<group>"; };
 		579D80AD2B0166AB0082AFED /* PalavraVivaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalavraVivaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57A7EB9F2B1D18FA003CD6C1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVersesTableViewController.swift; sourceTree = "<group>"; };
-		57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookVersesTableViewController.storyboard; sourceTree = "<group>"; };
 		57CDC4132B33ED75009A7F6C /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		57CDC41D2B341A2F009A7F6C /* UniqueVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueVerse.swift; sourceTree = "<group>"; };
 		57CDC4202B3427B4009A7F6C /* unique-verse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "unique-verse.json"; sourceTree = "<group>"; };
+		57CDC4222B342ABD009A7F6C /* BookVersesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookVersesViewController.storyboard; sourceTree = "<group>"; };
+		57CDC4242B342AD6009A7F6C /* BookVersesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVersesViewController.swift; sourceTree = "<group>"; };
 		57E09E382B0865ED005267CE /* GlobalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalPreferences.swift; sourceTree = "<group>"; };
 		57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChaptersViewController.swift; sourceTree = "<group>"; };
 		57E09E3C2B086F01005267CE /* BookChaptersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookChaptersViewController.storyboard; sourceTree = "<group>"; };
@@ -485,8 +485,8 @@
 				57FA765F2B13E0FB003A44E6 /* Service */,
 				5791C6042B1239D7005A3ED5 /* ViewModel */,
 				57FA76552B13D89F003A44E6 /* Cells */,
-				57CC99F32B0EFB5200FC599D /* BookVersesTableViewController.swift */,
-				57CC99F52B0EFB5C00FC599D /* BookVersesTableViewController.storyboard */,
+				57CDC4222B342ABD009A7F6C /* BookVersesViewController.storyboard */,
+				57CDC4242B342AD6009A7F6C /* BookVersesViewController.swift */,
 			);
 			path = BookVersesView;
 			sourceTree = "<group>";
@@ -795,6 +795,7 @@
 				57FA765C2B13D9D1003A44E6 /* book-verse.json in Resources */,
 				57F6E6712B1ACB4800EDE539 /* music.json in Resources */,
 				577658AA2B01D1C500F6F2AF /* NearChurchsViewController.storyboard in Resources */,
+				57CDC4232B342ABE009A7F6C /* BookVersesViewController.storyboard in Resources */,
 				57E285042B16D1E60000B345 /* GoogleService-Info.plist in Resources */,
 				57EDACD82B05D1B00040F792 /* CardBookCollectionViewCell.xib in Resources */,
 				57CDC4212B3427B4009A7F6C /* unique-verse.json in Resources */,
@@ -811,7 +812,6 @@
 				577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */,
 				579D80922B0166A90082AFED /* LoginViewController.storyboard in Resources */,
 				57EDACCA2B05C14D0040F792 /* BooksTableViewCell.xib in Resources */,
-				57CC99F62B0EFB5C00FC599D /* BookVersesTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,7 +844,6 @@
 				578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */,
 				57CDC4142B33ED75009A7F6C /* UserAuth.swift in Sources */,
 				5791C6062B123A4D005A3ED5 /* BookVersesViewModel.swift in Sources */,
-				57CC99F42B0EFB5200FC599D /* BookVersesTableViewController.swift in Sources */,
 				57CDC4172B33F84A009A7F6C /* RootNavigationController.swift in Sources */,
 				57E09E402B0874E1005267CE /* BookChaptersViewModel.swift in Sources */,
 				57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */,
@@ -858,6 +857,7 @@
 				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
 				5784B0B52B33CB6D00AFD329 /* UserIntern.swift in Sources */,
+				57CDC4252B342AD6009A7F6C /* BookVersesViewController.swift in Sources */,
 				579D808F2B0166A90082AFED /* LoginViewController.swift in Sources */,
 				5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */,
 				5738BF782B3345B300569FE4 /* RegisterScreen.swift in Sources */,
