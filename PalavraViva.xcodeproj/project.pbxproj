@@ -48,6 +48,7 @@
 		57CDC4142B33ED75009A7F6C /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4132B33ED75009A7F6C /* UserAuth.swift */; };
 		57CDC4172B33F84A009A7F6C /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */; };
 		57CDC41E2B341A2F009A7F6C /* UniqueVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC41D2B341A2F009A7F6C /* UniqueVerse.swift */; };
+		57CDC4212B3427B4009A7F6C /* unique-verse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57CDC4202B3427B4009A7F6C /* unique-verse.json */; };
 		57D5F64B2B328A2500D9CA55 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57D5F64A2B328A2500D9CA55 /* IQKeyboardManagerSwift */; };
 		57E09E362B0863E8005267CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 57E09E352B0863E8005267CE /* Alamofire */; };
 		57E09E392B0865ED005267CE /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E09E382B0865ED005267CE /* GlobalPreferences.swift */; };
@@ -148,7 +149,7 @@
 		57CDC4132B33ED75009A7F6C /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		57CDC4162B33F84A009A7F6C /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		57CDC41D2B341A2F009A7F6C /* UniqueVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueVerse.swift; sourceTree = "<group>"; };
-		57CDC41F2B341B0D009A7F6C /* unique-verse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "unique-verse.json"; sourceTree = "<group>"; };
+		57CDC4202B3427B4009A7F6C /* unique-verse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "unique-verse.json"; sourceTree = "<group>"; };
 		57E09E382B0865ED005267CE /* GlobalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalPreferences.swift; sourceTree = "<group>"; };
 		57E09E3A2B086EEE005267CE /* BookChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChaptersViewController.swift; sourceTree = "<group>"; };
 		57E09E3C2B086F01005267CE /* BookChaptersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookChaptersViewController.storyboard; sourceTree = "<group>"; };
@@ -243,7 +244,7 @@
 				576F44B62B02FEEA0029A54D /* books.json */,
 				576F44B82B02FF730029A54D /* book-with-comment.json */,
 				57FA765B2B13D9D1003A44E6 /* book-verse.json */,
-				57CDC41F2B341B0D009A7F6C /* unique-verse.json */,
+				57CDC4202B3427B4009A7F6C /* unique-verse.json */,
 				57F6E6702B1ACB4800EDE539 /* music.json */,
 			);
 			path = Mocks;
@@ -796,6 +797,7 @@
 				577658AA2B01D1C500F6F2AF /* NearChurchsViewController.storyboard in Resources */,
 				57E285042B16D1E60000B345 /* GoogleService-Info.plist in Resources */,
 				57EDACD82B05D1B00040F792 /* CardBookCollectionViewCell.xib in Resources */,
+				57CDC4212B3427B4009A7F6C /* unique-verse.json in Resources */,
 				57EDACBA2B058F080040F792 /* SearchTableViewCell.xib in Resources */,
 				5792D1812B0AABDD00CDBA86 /* ChaptersTableViewCell.xib in Resources */,
 				57FA765A2B13D8CF003A44E6 /* VerseTableViewCell.xib in Resources */,
