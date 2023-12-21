@@ -22,7 +22,11 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configElements()
+        if UserAuth.getSavedToken() != nil {
+            navigateToTabBarController()
+        } else {
+            configElements()
+        }
     }
 
     func configElements() {
@@ -61,22 +65,24 @@ class LoginViewController: UIViewController {
         loginButton.isEnabled = false
         Auth.auth().signIn(withEmail: email, password: password) { [weak self]
             result, _ in
-            guard let self else { return }
-            self.loginButton.isEnabled = true
-            guard result != nil else {
-                Alert.setNewAlert(target: self, title: "Oops", message: "E-mail ou senha incorretos")
-                return
-            }
-            self.navigateToTabBarController()
+                guard let self else { return }
+                self.loginButton.isEnabled = true
+                guard result != nil else {
+                    Alert.setNewAlert(target: self, title: "Oops", message: "E-mail ou senha incorretos")
+                    return
+                }
+                self.navigateToTabBarController()
+                guard let accessToken = result?.user.uid as? String else { return }
+                UserAuth.updateToken(accessToken)
         }
     }
 
     func navigateToTabBarController() {
         let vcString = String(describing: TabBarController.self)
         let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
-    
+
     func handleLoginButtonState() {
         if emailValid && passwordValid {
             loginButton.isEnabled = true
@@ -90,9 +96,9 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func tappedSignUp(_ sender: UIButton) {
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
-    
+
     @IBAction func tappedGoogle(_ sender: UIButton) {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         // Create Google Sign In configuration object.
@@ -107,6 +113,8 @@ class LoginViewController: UIViewController {
                 return
             }
             self.navigateToTabBarController()
+            guard let accessToken = signInResult?.user.userID as? String else { return }
+            UserAuth.updateToken(accessToken)
         }
     }
 }

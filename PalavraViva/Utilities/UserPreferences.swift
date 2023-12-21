@@ -13,6 +13,7 @@ enum Preferences: String {
     case fontSize
     case primaryLanguage
     case secondaryLanguage
+    case authToken
 }
 
 class UserPreferences {
@@ -25,6 +26,7 @@ class UserPreferences {
     
     static func updateUserDefaults(_ value: Any,_ key: Preferences) {
         UserDefaults.standard.set(value, forKey: key.rawValue)
+        UserDefaults.standard.synchronize()
     }
     
     static func getVersion() -> String {
