@@ -12,8 +12,8 @@ class BookVerseService {
     func getVerses(book: Book, chapter: Int, completion: @escaping completion<[Verse]>) {
         switch GlobalPreferences.serviceType {
         case .api:
-            let version = UserPreferences.getVersion()
-            let urlString = "\(GlobalPreferences.apiUrl)/verses/\(version)/\(book.abbrev.pt)/\(chapter)"
+            let version = UserPreferences.getPrimaryVersion()
+            let urlString = GlobalPreferences.apiUrl(route: "/verses/\(version)/\(book.abbrev.pt)/\(chapter)")
             AF.request(urlString, method: .get).responseDecodable(of: Chapter.self) { response in
                 switch response.result {
                 case let .success(chapter):

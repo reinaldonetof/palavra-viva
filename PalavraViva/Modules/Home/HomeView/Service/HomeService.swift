@@ -39,7 +39,7 @@ class HomeService {
     func getBooks(completion: @escaping (Result<[Book], Error>) -> Void) {
         switch GlobalPreferences.serviceType {
         case .api:
-            let urlString = "\(GlobalPreferences.apiUrl)/books"
+            let urlString = GlobalPreferences.apiUrl(route: "/books")
             AF.request(urlString, method: .get).responseDecodable(of: [Book].self) { response in
                 switch response.result {
                 case .success(let history):
