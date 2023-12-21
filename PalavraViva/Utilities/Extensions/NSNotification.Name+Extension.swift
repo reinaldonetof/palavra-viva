@@ -12,4 +12,5 @@ extension NSNotification.Name {
     static func pausingAudio(url: String) -> Self {
         return Self("pause-\(url)")
     }
+    static let changePrimaryVersion = Self("changePrimaryVersion")
 }

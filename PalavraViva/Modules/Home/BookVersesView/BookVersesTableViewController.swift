@@ -42,6 +42,7 @@ class BookVersesTableViewController: UITableViewController {
     
     func configObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(changeFontSize), name: .changeFontSize, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changePrimaryVersion), name: .changePrimaryVersion, object: nil)
     }
     
     @objc func changeFontSize() {
@@ -50,6 +51,10 @@ class BookVersesTableViewController: UITableViewController {
         } else {
             shouldReloadData = true
         }
+    }
+    
+    @objc func changePrimaryVersion() {
+        viewModel.fetchVerses()
     }
 
     @objc private func refresh() {

@@ -13,6 +13,7 @@ class UserPreferenceViewController: UIViewController {
     @IBOutlet var fontSizeLabel: UILabel!
     @IBOutlet var sliderComponent: UISlider!
     @IBOutlet var logoutButton: UIButton!
+    @IBOutlet weak var primaryVersionButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +37,29 @@ class UserPreferenceViewController: UIViewController {
         sliderComponent.minimumValue = 10
         sliderComponent.maximumValue = 48
         sliderComponent.value = Float(UserPreferences.getFontSize())
-
+        configPrimaryMenu()
         logoutButton.tintColor = .red
+    }
+    
+    func handleElementMenu(version: Versions) {
+        if version.rawValue != UserPreferences.getPrimaryVersion() {
+            UserPreferences.updateUserDefaults(version.rawValue, .primaryVersion)
+            NotificationCenter.default.post(name: .changePrimaryVersion, object: nil)
+        }
+    }
+    
+    func configPrimaryMenu() {
+        let versionSelected = UserPreferences.getPrimaryVersion()
+        var elements: [UIAction] = []
+        Versions.allCases.forEach({ version in
+            let el = UIAction(title: UserPreferences.versionName(version), state: version.rawValue == versionSelected ? .on : .off) { _ in
+                self.handleElementMenu(version: version)
+            }
+            elements.append(el)
+        })
+        let menu = UIMenu(title: "Versão principal", children: elements)
+        primaryVersionButton.showsMenuAsPrimaryAction = true
+        primaryVersionButton.menu = menu
     }
 
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {

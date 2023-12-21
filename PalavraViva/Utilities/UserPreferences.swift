@@ -16,15 +16,24 @@ enum Preferences: String {
     case authToken
 }
 
-enum Versions: String {
+enum Versions: String, CaseIterable {
     case acf
     case kjv
     case nvi
 }
 
-var VersionDictionary: [Versions: String] = [.acf: "Almeida Corrigida Fiel", .kjv: "King James Version", .nvi: "Almeida Corrigida Fiel"]
-
 class UserPreferences {
+    static func versionName(_ version: Versions) -> String {
+        switch version {
+        case .acf:
+            return "Almeida Corrigida Fiel"
+        case .kjv:
+            return "King James Version"
+        case .nvi:
+            return "Nova Versão Internacional"
+        }
+    }
+    
     static func getUserAuthenticated() -> User? {
         guard let user = Auth.auth().currentUser else {
             return nil

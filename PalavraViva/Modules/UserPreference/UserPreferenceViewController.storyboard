@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,11 +44,30 @@
                                     <action selector="tappedLogout:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mcN-5j-BRP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1YF-E4-0WA">
+                                <rect key="frame" x="238" y="103.66666666666667" width="135" height="30.000000000000014"/>
+                                <menu key="menu" id="Czo-EH-YzO">
+                                    <menuOptions key="menuOptions" singleSelection="YES"/>
+                                    <children>
+                                        <command title="King James Version" id="bJa-OF-JeO"/>
+                                        <command title="Nova Versão Internacional" id="tFV-PT-nOC"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="King James Version"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versão principal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRI-Aw-1RS">
+                                <rect key="frame" x="19.999999999999993" y="108" width="126.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jRI-Aw-1RS" firstAttribute="leading" secondItem="5gL-up-4eF" secondAttribute="leading" id="1gz-Di-2kb"/>
                             <constraint firstItem="36b-78-WCE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CtR-mH-fgI"/>
+                            <constraint firstItem="1YF-E4-0WA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jRI-Aw-1RS" secondAttribute="trailing" constant="8" id="Gel-FJ-bMy"/>
                             <constraint firstItem="Cad-z5-ETy" firstAttribute="leading" secondItem="5gL-up-4eF" secondAttribute="trailing" constant="12" id="O4a-Qa-Vav"/>
                             <constraint firstItem="5gL-up-4eF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="PzA-6J-gVs"/>
                             <constraint firstItem="Cad-z5-ETy" firstAttribute="centerY" secondItem="5gL-up-4eF" secondAttribute="centerY" id="ahv-yt-FVU"/>
@@ -55,13 +75,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="36b-78-WCE" secondAttribute="bottom" constant="32" id="e2d-mW-Hw8"/>
                             <constraint firstItem="5gL-up-4eF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="e3w-er-kw7"/>
                             <constraint firstItem="JKm-Pk-UQT" firstAttribute="leading" secondItem="Cad-z5-ETy" secondAttribute="trailing" constant="4" id="jYE-6B-UEU"/>
+                            <constraint firstItem="1YF-E4-0WA" firstAttribute="centerY" secondItem="jRI-Aw-1RS" secondAttribute="centerY" id="olK-Tj-noh"/>
                             <constraint firstItem="JKm-Pk-UQT" firstAttribute="centerY" secondItem="Cad-z5-ETy" secondAttribute="centerY" id="qex-0O-aAf"/>
+                            <constraint firstItem="1YF-E4-0WA" firstAttribute="trailing" secondItem="JKm-Pk-UQT" secondAttribute="trailing" id="rtQ-9J-RcB"/>
+                            <constraint firstItem="jRI-Aw-1RS" firstAttribute="top" secondItem="5gL-up-4eF" secondAttribute="bottom" constant="16" id="tz1-dI-wd0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fontSizeDescriptionLabel" destination="5gL-up-4eF" id="fDk-ez-rg5"/>
                         <outlet property="fontSizeLabel" destination="JKm-Pk-UQT" id="aJz-bZ-JSI"/>
                         <outlet property="logoutButton" destination="36b-78-WCE" id="pkQ-PH-K92"/>
+                        <outlet property="primaryVersionButton" destination="1YF-E4-0WA" id="IoX-Cv-emS"/>
                         <outlet property="sliderComponent" destination="Cad-z5-ETy" id="wbY-Kx-d8r"/>
                     </connections>
                 </viewController>
