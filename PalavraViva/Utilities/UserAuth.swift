@@ -37,4 +37,8 @@ class UserAuth {
         return nil
     }
     
+    static func removeSavedToken() {
+        UserDefaults.standard.removeObject(forKey: AuthValues.authToken.rawValue)
+    }
+    
 }

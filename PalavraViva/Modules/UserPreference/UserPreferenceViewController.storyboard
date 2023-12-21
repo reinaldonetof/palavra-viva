@@ -31,14 +31,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36b-78-WCE">
+                                <rect key="frame" x="20" y="751" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gGS-ha-AUd"/>
+                                    <constraint firstAttribute="width" constant="100" id="kHD-gG-MCw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                <connections>
+                                    <action selector="tappedLogout:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mcN-5j-BRP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="36b-78-WCE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CtR-mH-fgI"/>
                             <constraint firstItem="Cad-z5-ETy" firstAttribute="leading" secondItem="5gL-up-4eF" secondAttribute="trailing" constant="12" id="O4a-Qa-Vav"/>
                             <constraint firstItem="5gL-up-4eF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="PzA-6J-gVs"/>
                             <constraint firstItem="Cad-z5-ETy" firstAttribute="centerY" secondItem="5gL-up-4eF" secondAttribute="centerY" id="ahv-yt-FVU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JKm-Pk-UQT" secondAttribute="trailing" constant="20" id="che-Oh-GfS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="36b-78-WCE" secondAttribute="bottom" constant="32" id="e2d-mW-Hw8"/>
                             <constraint firstItem="5gL-up-4eF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="e3w-er-kw7"/>
                             <constraint firstItem="JKm-Pk-UQT" firstAttribute="leading" secondItem="Cad-z5-ETy" secondAttribute="trailing" constant="4" id="jYE-6B-UEU"/>
                             <constraint firstItem="JKm-Pk-UQT" firstAttribute="centerY" secondItem="Cad-z5-ETy" secondAttribute="centerY" id="qex-0O-aAf"/>
@@ -47,6 +61,7 @@
                     <connections>
                         <outlet property="fontSizeDescriptionLabel" destination="5gL-up-4eF" id="fDk-ez-rg5"/>
                         <outlet property="fontSizeLabel" destination="JKm-Pk-UQT" id="aJz-bZ-JSI"/>
+                        <outlet property="logoutButton" destination="36b-78-WCE" id="pkQ-PH-K92"/>
                         <outlet property="sliderComponent" destination="Cad-z5-ETy" id="wbY-Kx-d8r"/>
                     </connections>
                 </viewController>

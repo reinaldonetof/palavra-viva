@@ -98,13 +98,14 @@ class RegisterScreen: UIView {
     }()
 
     lazy var registerButton: UIButton = {
-        let button = UIButton(type: .roundedRect)
+        let button = UIButton(type: .system)
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cadastrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .disabled)
+        button.tintColor = .systemBlue
         button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
