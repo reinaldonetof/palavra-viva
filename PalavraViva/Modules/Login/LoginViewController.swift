@@ -58,18 +58,25 @@ class LoginViewController: UIViewController {
             passwordTextField.layer.borderColor = UIColor.red.cgColor
             return
         }
-        Auth.auth().signIn(withEmail: email, password: password) {
+        loginButton.isEnabled = false
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self]
             result, _ in
+            guard let self else { return }
+            self.loginButton.isEnabled = true
             guard result != nil else {
                 Alert.setNewAlert(target: self, title: "Oops", message: "E-mail ou senha incorretos")
                 return
             }
-            let vcString = String(describing: TabBarController.self)
-            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
-            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+            self.navigateToTabBarController()
         }
     }
 
+    func navigateToTabBarController() {
+        let vcString = String(describing: TabBarController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarController
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
     func handleLoginButtonState() {
         if emailValid && passwordValid {
             loginButton.isEnabled = true
@@ -93,11 +100,13 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance.configuration = config
 
         // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [weak self] signInResult, error in
+            guard let self else { return }
             guard signInResult != nil else {
                 Alert.setNewAlert(target: self, title: "Alerta", message: "Error: \(error?.localizedDescription ?? "Usuário inválido")")
                 return
             }
+            self.navigateToTabBarController()
         }
     }
 }

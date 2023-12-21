@@ -124,7 +124,8 @@ class RegisterScreen: UIView {
                     username: username
                 ),
                 password: password)
-        ) { _ in
+        ) { [weak self] _ in
+            guard let self else { return }
             self.registerButton.isEnabled = true
         }
     }

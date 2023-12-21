@@ -45,8 +45,8 @@ class TabBarController: UITabBarController {
             return nav
         }()
         let fifthVC: UINavigationController = {
-            let vcString = String(describing: UserViewController.self)
-            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? UserViewController
+            let vcString = String(describing: UserPreferenceViewController.self)
+            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? UserPreferenceViewController
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
             nav.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(named: "user"), tag: 0)
             return nav
