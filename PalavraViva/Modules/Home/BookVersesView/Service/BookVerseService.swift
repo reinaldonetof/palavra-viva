@@ -36,4 +36,32 @@ class BookVerseService {
             }
         }
     }
+    
+    func getVerse(book: Book, chapter: Int, number: Int, completion: @escaping completion<String>) {
+        switch GlobalPreferences.serviceType {
+        case .api:
+            let version = UserPreferences.getSecondaryVersion()
+            let urlString = GlobalPreferences.apiUrl(route: "/verses/\(version)/\(book.abbrev.pt)/\(chapter)/\(number)")
+            AF.request(urlString, method: .get).responseDecodable(of: UniqueVerse.self) { response in
+                switch response.result {
+                case let .success(uniqueVerse):
+                    let verse = uniqueVerse.text
+                    completion(.success(verse))
+                case let .failure(failure):
+                    completion(.failure(.error(description: failure.localizedDescription)))
+                }
+            }
+        default:
+            if let url = Bundle.main.url(forResource: "unique-verse", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    let uniqueVerse: UniqueVerse = try JSONDecoder().decode(UniqueVerse.self, from: data)
+                    let verse = uniqueVerse.text
+                    completion(.success(verse))
+                } catch {
+                    completion(.failure(.error(description: error.localizedDescription)))
+                }
+            }
+        }
+    }
 }

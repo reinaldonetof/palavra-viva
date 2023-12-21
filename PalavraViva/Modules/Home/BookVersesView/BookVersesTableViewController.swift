@@ -102,16 +102,27 @@ class BookVersesTableViewController: UITableViewController {
         cell?.setupCell(verse: viewModel.getVerseForRow(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.fetchSecondaryVersion(indexPath: indexPath)
+    }
 }
 
 extension BookVersesTableViewController: BookVersesViewModelProtocol {
+    func successRequestUniqueVerse(text: String) {
+        print(text)
+    }
+    
+    func errorRequestUniqueVerse(error: Error) {
+        Alert.setNewAlert(target: self, title: "Error ao capturar o verso", message: "Error: \(error.localizedDescription)")
+    }
+    
     func successRequest() {
         configTable()
     }
 
     func errorRequest(error: Error) {
-        print(error)
-        Alert.setNewAlert(target: self, title: "Error no request", message: "Error: \(error)")
+        Alert.setNewAlert(target: self, title: "Error no request", message: "Error: \(error.localizedDescription)")
         refreshControl?.endRefreshing()
     }
 }

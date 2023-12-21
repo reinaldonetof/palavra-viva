@@ -10,6 +10,8 @@ import Foundation
 protocol BookVersesViewModelProtocol: AnyObject {
     func successRequest()
     func errorRequest(error: Error)
+    func successRequestUniqueVerse(text: String)
+    func errorRequestUniqueVerse(error: Error)
 }
 
 class BookVersesViewModel {
@@ -17,6 +19,7 @@ class BookVersesViewModel {
     private var book: Book
     private var chapter: Int
     private var verses: [Verse] = []
+    private var verse: String = ""
     
     weak var delegate: BookVersesViewModelProtocol?
     
@@ -47,5 +50,18 @@ class BookVersesViewModel {
                 self.delegate?.errorRequest(error: failure)
             }
         })
+    }
+    
+    func fetchSecondaryVersion(indexPath: IndexPath) {
+        let number = indexPath.row + 1
+        service.getVerse(book: book, chapter: chapter, number: number) { result in
+            switch result {
+            case let .success(success):
+                self.verse = success
+                self.delegate?.successRequestUniqueVerse(text: success)
+            case let .failure(failure):
+                self.delegate?.errorRequestUniqueVerse(error: failure)
+            }
+        }
     }
 }
