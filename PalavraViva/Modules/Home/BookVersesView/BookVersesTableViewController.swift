@@ -11,13 +11,6 @@ class BookVersesTableViewController: UITableViewController {
     private var viewModel: BookVersesViewModel
     private var isShowing = false
     private var shouldReloadData = false
-    
-    lazy var overlayView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
 
     init?(coder: NSCoder, book: Book, chapterSelected: Int) {
         viewModel = BookVersesViewModel(book: book, chapter: chapterSelected)
@@ -36,7 +29,6 @@ class BookVersesTableViewController: UITableViewController {
         configObserver()
         viewModel.delegate = self
         viewModel.fetchVerses()
-        setupOverlayView()
     }
 
     func configTable() {
@@ -119,7 +111,6 @@ class BookVersesTableViewController: UITableViewController {
 extension BookVersesTableViewController: BookVersesViewModelProtocol {
     func successRequestUniqueVerse(text: String) {
         print(text)
-        overlayView.isHidden = false
     }
     
     func errorRequestUniqueVerse(error: Error) {
@@ -134,20 +125,4 @@ extension BookVersesTableViewController: BookVersesViewModelProtocol {
         Alert.setNewAlert(target: self, title: "Error no request", message: "Error: \(error.localizedDescription)")
         refreshControl?.endRefreshing()
     }
-}
-
-extension BookVersesTableViewController {
-    func setupOverlayView() {
-           // Adiciona a view acima da UITableView
-           view.addSubview(overlayView)
-
-           NSLayoutConstraint.activate([
-               overlayView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-               overlayView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-               overlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-               overlayView.heightAnchor.constraint(equalToConstant: 200)
-           ])
-
-           overlayView.isHidden = true
-       }
 }
