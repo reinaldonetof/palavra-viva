@@ -24,6 +24,7 @@
 		577658AE2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */; };
 		577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577658AF2B01D20A00F6F2AF /* UserViewController.swift */; };
 		577658B22B01D21400F6F2AF /* UserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577658B12B01D21400F6F2AF /* UserViewController.storyboard */; };
+		5784B0B52B33CB6D00AFD329 /* UserIntern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784B0B42B33CB6D00AFD329 /* UserIntern.swift */; };
 		578A136E2B18237400C2B5E0 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578A136D2B18237400C2B5E0 /* AudioPlayer.swift */; };
 		578F86E72B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */; };
 		578F86E82B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */; };
@@ -116,6 +117,7 @@
 		577658AD2B01D1ED00F6F2AF /* PraiseSongsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PraiseSongsViewController.storyboard; sourceTree = "<group>"; };
 		577658AF2B01D20A00F6F2AF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		577658B12B01D21400F6F2AF /* UserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserViewController.storyboard; sourceTree = "<group>"; };
+		5784B0B42B33CB6D00AFD329 /* UserIntern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIntern.swift; sourceTree = "<group>"; };
 		578A136D2B18237400C2B5E0 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		578F86E52B0C4FE500A2CFC0 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
 		578F86E62B0C4FE500A2CFC0 /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				57FA765D2B13DBE6003A44E6 /* Chapter.swift */,
 				578F86EE2B0C5A9100A2CFC0 /* ObjectToShow.swift */,
 				57F6E6762B1ACE8A00EDE539 /* Musics.swift */,
+				5784B0B42B33CB6D00AFD329 /* UserIntern.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 				577658A02B01CDD700F6F2AF /* HomeViewController.swift in Sources */,
 				5792D1802B0AABDD00CDBA86 /* ChaptersTableViewCell.swift in Sources */,
 				577658B02B01D20A00F6F2AF /* UserViewController.swift in Sources */,
+				5784B0B52B33CB6D00AFD329 /* UserIntern.swift in Sources */,
 				579D808F2B0166A90082AFED /* LoginViewController.swift in Sources */,
 				5776589E2B01CD7B00F6F2AF /* TabBarController.swift in Sources */,
 				5738BF782B3345B300569FE4 /* RegisterScreen.swift in Sources */,
